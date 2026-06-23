@@ -1,0 +1,645 @@
+@charset "utf-8";
+@namespace epub "http://www.idpf.org/2007/ops";
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+
+/* * Impression Editions — Base CSS Layer
+ * Universal rules shared by all book types.
+ * The best version of every section, sourced from the most refined template.
+ * Type-specific templates (novel.css, verse.css, etc.) are appended after this
+ * file and may override these rules via CSS cascade (last match wins). */
+/* === FOREIGN LANGUAGE === */
+body [xml|lang]{
+	font-style: italic;
+}
+
+blockquote[xml|lang]{
+	font-style: italic;
+}
+
+/* === DEDICATIONS === */
+[epub|type~="dedication"]{
+	font-variant: small-caps;
+}
+
+#dedication b{
+	text-transform: uppercase;
+}
+
+section[epub|type~="dedication"]{
+	text-align: center;
+}
+
+section[epub|type~="dedication"] > *{
+	display: inline-block;
+	margin: auto;
+	margin-top: 3em;
+	max-width: 80%;
+}
+
+@supports(display: flex){
+	section[epub|type~="dedication"]{
+		align-items: center;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: calc(98vh - 3em);
+		padding-top: 3em;
+	}
+
+	section[epub|type~="dedication"] > *{
+		margin: 0;
+	}
+}
+
+/* === EPIGRAPHS === */
+[epub|type~="epigraph"]{
+	font-style: italic;
+	hyphens: none;
+	-epub-hyphens: none;
+}
+
+[epub|type~="epigraph"] i{
+	font-style: normal;
+}
+
+[epub|type~="epigraph"] cite{
+	font-style: normal;
+	font-variant: small-caps;
+	margin-top: 1em;
+}
+
+[epub|type~="epigraph"] cite i{
+	font-style: italic;
+}
+
+/* Full-page epigraphs */
+section[epub|type~="epigraph"]{
+	text-align: center;
+}
+
+section[epub|type~="epigraph"] > *{
+	display: inline-block;
+	margin: auto;
+	margin-top: 3em;
+	max-width: 80%;
+	text-align: initial;
+}
+
+@supports(display: flex){
+	section[epub|type~="epigraph"]{
+		align-items: center;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: calc(98vh - 3em);
+		padding-top: 3em;
+	}
+
+	section[epub|type~="epigraph"] > *{
+		margin: 0;
+	}
+
+	section[epub|type~="epigraph"] > * + *{
+		margin-top: 3em;
+	}
+}
+
+/* Epigraphs in section headers */
+section > header [epub|type~="epigraph"]{
+	display: inline-block;
+	margin: auto;
+	max-width: 80%;
+	text-align: initial;
+}
+
+section > header [epub|type~="epigraph"] + *{
+	margin-top: 3em;
+}
+
+@supports(display: table){
+	section > header [epub|type~="epigraph"]{
+		display: table;
+	}
+}
+
+/* === POETRY / VERSE / SONGS / HYMNS === */
+/* IE rule: poems must have breathing room above and below. */
+[epub|type~="z3998:poem"],
+[epub|type~="z3998:song"],
+[epub|type~="z3998:verse"],
+[epub|type~="z3998:hymn"]{
+	margin: 1.5em 2em;
+}
+
+[epub|type~="z3998:poem"] p,
+[epub|type~="z3998:song"] p,
+[epub|type~="z3998:verse"] p,
+[epub|type~="z3998:hymn"] p{
+	text-align: initial;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:poem"] p > span,
+[epub|type~="z3998:song"] p > span,
+[epub|type~="z3998:verse"] p > span,
+[epub|type~="z3998:hymn"] p > span{
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+[epub|type~="z3998:poem"] p > span + br,
+[epub|type~="z3998:song"] p > span + br,
+[epub|type~="z3998:verse"] p > span + br,
+[epub|type~="z3998:hymn"] p > span + br{
+	display: none;
+}
+
+[epub|type~="z3998:poem"] p + p,
+[epub|type~="z3998:song"] p + p{
+	margin-top: 1em;
+}
+
+/* === PG-STYLE POETRY MARKUP (Gerrata scan format) === */
+/* <div class="poetry"><div class="stanza"><div class="i0/i1/i2/..."> */
+div.poetry{
+	margin: 1em auto;
+	text-align: initial;
+}
+
+div.stanza{
+	margin-bottom: 1em;
+}
+
+div.stanza:last-child{
+	margin-bottom: 0;
+}
+
+div.stanza > div{
+	line-height: 1.4;
+	margin: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+div.stanza > div.i0{
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+div.stanza > div.i1{
+	padding-left: 2em;
+	text-indent: -1em;
+}
+
+div.stanza > div.i2{
+	padding-left: 3em;
+	text-indent: -1em;
+}
+
+div.stanza > div.i3{
+	padding-left: 4em;
+	text-indent: -1em;
+}
+
+div.stanza > div.i4{
+	padding-left: 5em;
+	text-indent: -1em;
+}
+
+div.stanza > div.i5{
+	padding-left: 6em;
+	text-indent: -1em;
+}
+
+/* === INDENTATION LEVELS (span-based, complete set) === */
+p span.i1{
+	padding-left: 2em;
+	text-indent: -1em;
+}
+
+p span.i2{
+	padding-left: 3em;
+	text-indent: -1em;
+}
+
+p span.i3{
+	padding-left: 4em;
+	text-indent: -1em;
+}
+
+p span.i4{
+	padding-left: 5em;
+	text-indent: -1em;
+}
+
+p span.i5{
+	padding-left: 6em;
+	text-indent: -1em;
+}
+
+p span.i6{
+	padding-left: 7em;
+	text-indent: -1em;
+}
+
+p span.i7{
+	padding-left: 8em;
+	text-indent: -1em;
+}
+
+p span.i8{
+	padding-left: 9em;
+	text-indent: -1em;
+}
+
+p span.i11{
+	padding-left: 12em;
+	text-indent: -1em;
+}
+
+p span.i12{
+	padding-left: 13em;
+	text-indent: -1em;
+}
+
+/* === ELISION === */
+span.elision{
+	margin: .5em;
+	margin-left: 3em;
+}
+
+.elision{
+	margin: 1em;
+	text-align: center;
+	text-indent: 0;
+}
+
+/* === LETTERS === */
+footer{
+	margin-top: 1em;
+	text-align: right;
+}
+
+[epub|type~="z3998:sender"],
+[epub|type~="z3998:recipient"],
+[epub|type~="z3998:salutation"],
+[epub|type~="z3998:signature"]{
+	font-variant: small-caps;
+}
+
+[epub|type~="z3998:recipient"] + p,
+[epub|type~="z3998:salutation"] + p,
+[epub|type~="z3998:letter"] header + p{
+	text-indent: 0;
+}
+
+[epub|type~="z3998:valediction"]{
+	font-variant: small-caps;
+	text-align: right;
+}
+
+[epub|type~="z3998:postscript"]{
+	margin-top: 1em;
+	text-align: initial;
+	text-indent: 0;
+}
+
+div[epub|type~="z3998:letter"]{
+	margin: 1em 0;
+}
+
+[epub|type~="z3998:letter"] header{
+	text-align: right;
+}
+
+/* === FIGURES & IMAGES === */
+figure{
+	break-inside: avoid;
+	margin: 1em 2.5em;
+}
+
+figure img{
+	display: block;
+	margin: auto;
+	max-height: 100vh;
+	max-width: 100%;
+}
+
+figcaption{
+	font-size: smaller;
+	font-style: italic;
+	margin: 1em;
+	text-align: center;
+}
+
+figcaption i{
+	font-style: normal;
+}
+
+figure.full-page{
+	break-after: page;
+	break-before: page;
+}
+
+figure.right{
+	float: right;
+	margin: 1em 0 1em 1em;
+	width: 45%;
+}
+
+hgroup + figure,
+header figure{
+	margin: 1em auto;
+	max-width: 70%;
+}
+
+/* === BRIDGEHEADS === */
+[epub|type~="se:bridgehead"]{
+	display: inline-block;
+	font-style: italic;
+	max-width: 60%;
+	text-align: justify;
+	text-indent: 0;
+}
+
+[epub|type~="se:bridgehead"] i{
+	font-style: normal;
+}
+
+/* === ERAS === */
+abbr[epub|type~="se:era"]{
+	font-variant: all-small-caps;
+}
+
+/* === BLOCKQUOTES (base — clean version) === */
+blockquote{
+	margin: 1em 2.5em;
+}
+
+blockquote p{
+	text-indent: 0;
+}
+
+/* === DRAMA / DIALOGUE TABLES === */
+[epub|type~="z3998:drama"] table,
+table[epub|type~="z3998:drama"]{
+	border-collapse: collapse;
+	margin: 1em auto;
+	width: 100%;
+}
+
+[epub|type~="z3998:drama"] tr:first-child td{
+	padding-top: 0;
+}
+
+[epub|type~="z3998:drama"] tr:last-child td{
+	padding-bottom: 0;
+}
+
+[epub|type~="z3998:drama"] td{
+	padding: .5em;
+	vertical-align: top;
+}
+
+[epub|type~="z3998:drama"] td:last-child{
+	padding-right: 0;
+}
+
+[epub|type~="z3998:drama"] td:first-child{
+	padding-left: 0;
+}
+
+[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"]{
+	hyphens: none;
+	-epub-hyphens: none;
+	text-align: right;
+	width: 20%;
+}
+
+/* === STAGE DIRECTIONS === */
+[epub|type~="z3998:stage-direction"]{
+	font-style: italic;
+}
+
+[epub|type~="z3998:stage-direction"] [epub|type~="z3998:persona"],
+i [epub|type~="z3998:persona"]{
+	font-style: normal;
+}
+
+[epub|type~="z3998:stage-direction"]::before{
+	content: "(";
+	font-style: normal;
+}
+
+[epub|type~="z3998:stage-direction"]::after{
+	content: ")";
+	font-style: normal;
+}
+
+/* === SPEAKER NAMES === */
+[epub|type~="z3998:persona"]{
+	font-variant: all-small-caps;
+}
+
+/* === DRAMATIS PERSONAE === */
+[epub|type~="z3998:dramatis-personae"]{
+	text-align: center;
+}
+
+[epub|type~="z3998:dramatis-personae"] p{
+	text-indent: 0;
+}
+
+[epub|type~="z3998:dramatis-personae"] ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+[epub|type~="z3998:dramatis-personae"] ul li{
+	font-style: italic;
+	margin: 1em;
+}
+
+[epub|type~="z3998:dramatis-personae"] ul + p{
+	margin-top: 2em;
+}
+
+/* === RESPONSIVE DRAMA (small screens) === */
+@media(max-width: 400px){
+	[epub|type~="z3998:drama"] td,
+	[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"],
+	[epub|type~="z3998:drama"] td:last-child{
+		display: block;
+		padding: 0;
+		text-align: initial;
+		width: 100%;
+	}
+
+	[epub|type~="z3998:drama"] td[epub|type~="z3998:persona"]{
+		break-after: avoid;
+		margin-top: 1.5em;
+	}
+
+	[epub|type~="z3998:drama"] td:first-child:not([epub|type]) + td{
+		margin-top: 1.5em;
+	}
+}
+
+/* === PAGE BREAKS === */
+section[id$="text"]{
+	break-before: page;
+}
+
+/* === ABOUT THE AUTHOR === */
+section#about-the-author{
+	text-align: initial;
+}
+
+/* === CHAPTER SUBTITLES === */
+h2 [epub|type~="subtitle"]{
+	display: block;
+	font-size: .75em;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.4;
+	margin-top: .5em;
+}
+
+section#about-the-author > h2{
+	text-align: center;
+}
+
+section#about-the-author .center,
+section#about-the-author div[style*="text-align:center"]{
+	margin: .3em 0 2.5em 0;
+	text-align: center;
+}
+
+figure.author-portrait{
+	margin: 1em auto 2em;
+	text-align: center;
+}
+
+figure.author-portrait img{
+	border-radius: 4px;
+	max-width: 200px;
+}
+
+/* === PUBLISHER LOGO === */
+img.publisher-logo{
+	display: block;
+	margin: 1em auto;
+	max-width: 222px;
+}
+
+/* === SIGNATURES === */
+[epub|type~="z3998:signature"]{
+	font-variant: small-caps;
+}
+
+/* === CHRONOLOGY / TIMELINE (invisible table) === */
+/* Borderless table for chronological event lists. The year column
+   provides visual alignment without visible borders. Responsive:
+   on narrow screens, year goes bold and description wraps below. */
+table[epub|type~="z3998:chronology"]{
+	border-collapse: collapse;
+	margin: 1em 0;
+	width: 100%;
+}
+
+table[epub|type~="z3998:chronology"] th,
+table[epub|type~="z3998:chronology"] td{
+	border: none;
+	padding: .3em 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+table[epub|type~="z3998:chronology"] th{
+	font-weight: normal;
+	padding-right: 1em;
+	white-space: nowrap;
+	width: 5em;
+}
+
+table[epub|type~="z3998:chronology"] td{
+	text-indent: 0;
+}
+
+table[epub|type~="z3998:chronology"] tr + tr th,
+table[epub|type~="z3998:chronology"] tr + tr td{
+	padding-top: .5em;
+}
+
+@media(max-width: 400px){
+	table[epub|type~="z3998:chronology"] th{
+		display: block;
+		font-weight: bold;
+		padding-right: 0;
+		width: 100%;
+	}
+
+	table[epub|type~="z3998:chronology"] td{
+		display: block;
+		padding-left: 1em;
+	}
+}
+
+/* === PREFACE SIGNATURES === */
+/* Author signatures at the end of prefaces/forewords/introductions.
+   These are typically the last paragraph(s) — a name, sometimes with
+   a location and date. Give them breathing room and italicize. */
+section[epub|type~="preface"] > p + p:last-of-type,
+section[epub|type~="foreword"] > p + p:last-of-type,
+section[epub|type~="introduction"] > p + p:last-of-type{
+	font-style: italic;
+	margin-top: 2em;
+	text-align: right;
+}
+
+section[epub|type~="preface"] > p + p + p:last-of-type,
+section[epub|type~="foreword"] > p + p + p:last-of-type,
+section[epub|type~="introduction"] > p + p + p:last-of-type{
+	font-style: italic;
+	margin-top: 0;
+	text-align: right;
+}
+
+/* === Type-specific: epic-poetry === */
+/* * Impression Editions — Epic Poetry CSS Template
+ * Type-specific overrides for long-form verse: epics, cantos
+ * Base rules are in base.css (prepended at build time) */
+/* === PREAMBLE (argument/summary before each book) === */
+[epub|type~="preamble"] > header p{
+	font-style: normal;
+	font-variant: small-caps;
+	text-align: center;
+}
+
+[epub|type~="preamble"] p{
+	font-style: italic;
+}
+
+[epub|type~="preamble"]{
+	margin-bottom: 3em;
+}
+
+/* Dedication centering */
+section[epub|type~="dedication"],
+section[epub|type~="z3998:dedication"]{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 80vh;
+	text-align: center;
+}
+
+section[epub|type~="dedication"] p,
+section[epub|type~="z3998:dedication"] p{
+	margin: auto;
+	text-align: center;
+}

@@ -1,0 +1,27 @@
+{
+  "cover": {
+    "source": "Wikimedia Commons: How_Gunnar_Met_Hallgerda.jpg",
+    "artist": "Henry Justice Ford",
+    "license": "Public Domain (US)",
+    "url": "https://commons.wikimedia.org/wiki/File:How_Gunnar_Met_Hallgerda.jpg",
+    "override": "cover-override/cover.jpg"
+  },
+  "frontispieces": [
+    {
+      "file": "manuscript-modruvallabok-f13r.jpg",
+      "source": "Wikimedia Commons: Möðruvallabók f13r.jpg",
+      "description": "Möðruvallabók (AM 132 fol.), fol. 13r — the medieval manuscript preserving Njáls saga, c. 1350",
+      "photographer": "GDK, 2005",
+      "license": "Public Domain",
+      "url": "https://commons.wikimedia.org/wiki/File:M%C3%B6%C3%B0ruvallab%C3%B3k_f13r.jpg"
+    },
+    {
+      "file": "map-of-iceland.jpg",
+      "source": "Wikimedia Commons: Story_of_Burnt_Njal_Iceland.png",
+      "description": "Map of Iceland from Dasent's 1861 edition of Burnt Njal (Edmonston & Douglas)",
+      "cartographer": "John Bartholomew and Son",
+      "license": "Public Domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Story_of_Burnt_Njal_Iceland.png"
+    }
+  ]
+}

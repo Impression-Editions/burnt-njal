@@ -1,0 +1,32 @@
+{
+  "pg_id": "597",
+  "title": "Burnt Njal",
+  "author": "George Webbe Dasent",
+  "slug": "dasent-george-webbe-burnt-njal",
+  "language": "en-GB",
+  "has_illustrations": false,
+  "illustration_count": 0,
+  "preserve_spelling": true,
+  "original_year": "1861",
+  "gutendex_subjects": [
+    "Njáll Þorgursson, approximately 930-1011"
+  ],
+  "llm_model": "google/gemini-3.1-flash-lite",
+  "llm_model_strong": "google/gemini-3.1-flash-lite",
+  "llm_batch_size": 5,
+  "proofread_chapters": 2,
+  "subtitle": null,
+  "authors": [
+    "Anonymous"
+  ],
+  "translators": [
+    "Sir George Webbe Dasent"
+  ],
+  "book_type": "epic-poetry",
+  "print_source": {
+    "translators": [
+      "Sir George Webbe Dasent"
+    ]
+  },
+  "drop_sections": []
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<se-lint-ignore>
+	<file path="content.opf">
+		<ignore code="m-042">
+			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
+		</ignore>
+		<ignore code="m-056">
+			<reason>IE does not have SE author pages to link to</reason>
+		</ignore>
+	</file>
+	<file path="cover.svg">
+		<ignore code="s-028">
+			<reason>Cover SVG and titlepage SVG titles differ by design</reason>
+		</ignore>
+	</file>
+	<file path="local.css">
+		<ignore code="c-002">
+			<reason>CSS template includes selectors for features this book does not use</reason>
+		</ignore>
+		<ignore code="c-006">
+			<reason>Semantic types from SE vocabulary do not require local CSS rules</reason>
+		</ignore>
+	</file>
+	<file path="titlepage.xhtml">
+		<ignore code="m-045">
+			<reason>Titlepage is not a ToC entry</reason>
+		</ignore>
+	</file>
+</se-lint-ignore>
