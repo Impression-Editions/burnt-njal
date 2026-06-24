@@ -506,7 +506,7 @@ def convert_fn_placeholders(text: str, short_name: str) -> str:
 
 
 def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict],
-                        short_name: str, section_type: str) -> str:
+                        short_name: str, section_type: str, section_id: str = None) -> str:
     """Build a single finished XHTML file for one section.
     
     Produces a complete, pipeline-ready XHTML file that the manifest builder
@@ -593,7 +593,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     if footnotes:
         parts.append('\t\t\t<hr/>')
-        parts.append('\t\t\t<section epub:type="endnotes">')
+        parts.append(f'\t\t\t<section id="{short_name}-endnotes" epub:type="endnotes">')
         parts.append('\t\t\t\t<h3 epub:type="title">Notes</h3>')
         for fn in footnotes:
             n = fn['index']
@@ -606,6 +606,8 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     body_content = '\n'.join(parts)
     
+    # Use section_id (from output filename) if provided, else short_name
+    sid = section_id if section_id else short_name
     return f"""<?xml version="1.0" encoding="utf-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" epub:prefix="z3998: http://www.daisy.org/z3998/2012/vocab/structure/, se: https://standardebooks.org/vocab/1.0" xml:lang="en-GB">
 \t<head>
@@ -614,7 +616,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
 \t\t<link href="../css/local.css" rel="stylesheet" type="text/css"/>
 \t</head>
 \t<body epub:type="{outer_type}">
-\t\t<section id="{short_name}" epub:type="{section_semantic}">
+\t\t<section id="{sid}" epub:type="{section_semantic}">
 \t\t\t<h2 epub:type="title">{escape_xml(title)}</h2>
 {body_content}
 \t\t</section>
@@ -697,7 +699,9 @@ def main():
         total_paragraphs += len(paragraphs)
         print(f"  {out_filename:30s}: {len(paragraphs):4d} paragraphs, {len(footnotes):3d} footnotes")
         
-        xhtml = build_section_xhtml(title, paragraphs, footnotes, short_name, section_type)
+        # Derive section_id from output filename (e.g., "appendix-6.xhtml" → "appendix-6")
+        section_id = out_filename.replace('.xhtml', '')
+        xhtml = build_section_xhtml(title, paragraphs, footnotes, short_name, section_type, section_id)
         out_path = text_dir / out_filename
         out_path.write_text(xhtml, encoding='utf-8')
     
