@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <se-lint-ignore>
 	<file path="content.opf">
-		<ignore code="m-042">
-			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
-		</ignore>
 		<ignore code="m-056">
 			<reason>IE does not have SE author pages to link to</reason>
+		</ignore>
+		<ignore code="m-042">
+			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
 		</ignore>
 	</file>
 	<file path="cover.svg">
