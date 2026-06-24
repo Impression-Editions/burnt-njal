@@ -565,6 +565,10 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     # Supplementary figures for specific sections
     if short_name == 'chronology-outline':
+        parts.append('\t\t\t<figure class="full-page" id="front-view-icelandic-hall">')
+        parts.append('\t\t\t\t<img src="../images/front-view-icelandic-hall.jpg" alt="Front view of the old Icelandic skáli or hall, showing the roofline, entrance porch, and surrounding landscape."/>')
+        parts.append('\t\t\t\t<figcaption>Front view of the old Icelandic skáli or hall. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
+        parts.append('\t\t\t</figure>')
         parts.append('\t\t\t<figure class="full-page" id="plan-thingvalla">')
         parts.append('\t\t\t\t<img src="../images/plan-thingvalla.jpg" alt="Plan of Thingvalla or Thingfield, showing Thingvalla Lake, the Great Rift (Almannagjá), Raven\'s Rift (Hrafnagjá), and surrounding landscape."/>')
         parts.append('\t\t\t\t<figcaption>Plan of Thingvalla or Thingfield. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
@@ -572,6 +576,10 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         parts.append('\t\t\t<figure class="full-page" id="plan-almannagia">')
         parts.append('\t\t\t\t<img src="../images/plan-almannagia-althing.jpg" alt="Enlarged plan of the Almannagjá and Althing, showing the Great Rift, booths, bridge, and the Hill of Laws (Lögberg)."/>')
         parts.append('\t\t\t\t<figcaption>Enlarged plan of the Almannagjá and Althing. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
+        parts.append('\t\t\t</figure>')
+        parts.append('\t\t\t<figure class="full-page" id="map-sw-iceland">')
+        parts.append('\t\t\t\t<img src="../images/map-sw-iceland.jpg" alt="Map of the south-western portion of Iceland, showing saga sites including Bergthorsknoll, Lithend, and the Markar River."/>')
+        parts.append('\t\t\t\t<figcaption>Map of the south-western portion of Iceland. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
         parts.append('\t\t\t</figure>')
     
     if footnotes:
