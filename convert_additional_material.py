@@ -552,7 +552,16 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         
         action = classify_short_text(para, title)
         if action == 'subheading':
-            parts.append(f'\t\t\t<h3>{escape_xml(para)}</h3>')
+            # Titlecase ALL CAPS subheadings
+            heading_text = para
+            if heading_text == heading_text.upper() and len(heading_text) > 3:
+                heading_text = heading_text.title().replace("Iceland", "Iceland")
+                # Fix common titlecase issues
+                for fix in [("The North Men In Iceland", "The North Men in Iceland"),
+                            ("Of The", "of the"), ("In The", "in the"),
+                            ("To The", "to the"), ("And The", "and the")]:
+                    heading_text = heading_text.replace(fix[0], fix[1])
+            parts.append(f'\t\t\t<h3>{escape_xml(heading_text)}</h3>')
         elif action == 'paragraph':
             # Escape XML entities first (before adding link tags)
             para = escape_xml(para)
@@ -584,14 +593,16 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     if footnotes:
         parts.append('\t\t\t<hr/>')
-        parts.append('\t\t\t<h3 epub:type="title">Notes</h3>')
+        parts.append('\t\t\t<section epub:type="endnotes">')
+        parts.append('\t\t\t\t<h3 epub:type="title">Notes</h3>')
         for fn in footnotes:
             n = fn['index']
             note_id = f"note-{short_name}-{n}"
             ref_id = f"noteref-{short_name}-{n}"
             fn_text = escape_xml(fn['text'])
             # Back-reference link before the note text
-            parts.append(f'\t\t\t<p id="{note_id}" epub:type="endnote"><a href="#{ref_id}">{n}</a> {fn_text}</p>')
+            parts.append(f'\t\t\t\t<p id="{note_id}"><a href="#{ref_id}">{n}</a> {fn_text}</p>')
+        parts.append('\t\t\t</section>')
     
     body_content = '\n'.join(parts)
     
