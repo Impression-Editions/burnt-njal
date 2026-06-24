@@ -177,11 +177,139 @@ def extract_page_footnotes(page_text: str) -> tuple[str, list[dict]]:
     return '\n'.join(body_lines), footnotes
 
 
+# Placeholder pattern for footnote markers in body text.
+# Uses rare Unicode chars that won't appear in OCR text.
+# Format: ⟦FN:N⟧ where N is the note number within the section.
+FN_PLACEHOLDER = re.compile(r'⟦FN:(\d+)⟧')
+
+def tag_footnote_markers(body_text: str, footnotes: list[dict], start_index: int) -> tuple[str, int]:
+    """Replace footnote marker chars in body text with numbered placeholders.
+    
+    For each footnote, find the first unlinked occurrence of its marker symbol
+    (e.g., '*', '†', '‡') in the body text and replace it with ⟦FN:N⟧.
+    
+    Markers can appear after word chars, closing parens, or punctuation:
+    - word†  (most common)
+    - )†     (after parenthetical)
+    - .†     (after sentence end — rare)
+    
+    Returns (modified_body_text, next_index).
+    """
+    idx = start_index
+    for fn in footnotes:
+        marker = fn['marker']
+        idx += 1
+        escaped = re.escape(marker)
+        # Match: word char, closing paren/quote, or punctuation + marker
+        # Not followed by another marker or letter (avoids decorative runs)
+        pattern = re.compile(rf'([\w\)\.,;:!?’”]){escaped}(?![\w{escaped}])')
+        match = pattern.search(body_text)
+        if match:
+            pos = match.end() - 1  # position of the marker char
+            body_text = body_text[:pos] + f'⟦FN:{idx}⟧' + body_text[match.end():]
+        # If no match, the footnote has no body marker — still gets a number
+    return body_text, idx
+
+
 def join_hyphens(text: str) -> str:
-    """Join words broken across lines by hyphens."""
-    text = re.sub(r'([a-z])-?\n([a-z])', r'\1\2', text)
+    """Join words broken across lines by hyphens.
+    
+    Handles:
+    - Hard hyphens: 'rash-\\nness' → 'rashness'  (join without space)
+    - Soft breaks (no hyphen): 'island\\nin' → 'island in'  (add space)
+    - Em-dash breaks: 'word—\\nword' → 'word—word'
+    """
+    # Hard hyphen at end of line: join without space
+    text = re.sub(r'([a-z])-\n([a-z])', r'\1\2', text)
     text = re.sub(r'([A-Z][a-z]+)-\n([a-z])', r'\1\2', text)
+    # Soft break (no hyphen): add a space
+    text = re.sub(r'([a-z])\n([a-z])', r'\1 \2', text)
+    text = re.sub(r'([a-z,;:])\n([A-Z])', r'\1 \2', text)
+    # Em-dash at end or beginning of line: join without adding space
+    text = re.sub(r'—\n', '—', text)
+    text = re.sub(r'\n—', '—', text)
     return text
+
+
+def fix_missing_spaces(text: str, word_dict: set = None) -> str:
+    """Fix missing spaces between words from OCR artifacts.
+    
+    Uses three strategies:
+    1. Dictionary-based splitting for merged lowercase words (needs word_dict)
+    2. lowercase→uppercase transition detection (Mc/Mac excluded)
+    3. digit→letter transitions
+    """
+    if word_dict is None:
+        word_dict = set()
+    
+    # Strategy 1: Split merged lowercase words using dictionary
+    def split_merged_token(match):
+        token = match.group(0)
+        tl = token.lower()
+        if len(tl) < 6:
+            return token
+        # Already a known word? Skip
+        if tl in word_dict:
+            return token
+        # Try to find a split point where both halves are known words
+        # Require both halves >= 3 chars. Prefer longest right half
+        # (handles "thereader" → "the"+"reader" not "there"+"ader")
+        best_split = None
+        for split_pos in range(3, len(tl) - 2):
+            left = tl[:split_pos]
+            right = tl[split_pos:]
+            if left in word_dict and right in word_dict:
+                if best_split is None or len(right) > best_split[0]:
+                    best_split = (len(right), split_pos)
+        if best_split:
+            sp = best_split[1]
+            return token[:sp] + ' ' + token[sp:]
+        return token
+    
+    text = re.sub(r"[a-zA-Z']{6,}", split_merged_token, text)
+    
+    # Strategy 2: lowercase→uppercase (missing space before proper noun)
+    def add_space(m):
+        prefix = m.group(1)
+        suffix = m.group(2)
+        if prefix.lower() in ('mc', 'mac', 'o'):
+            return m.group(0)
+        return prefix + ' ' + suffix
+    
+    text = re.sub(r'([a-z]{2,})([A-Z][a-z])', add_space, text)
+    
+    # Strategy 3: digit→letter
+    text = re.sub(r'(\d)([A-Z][a-z])', r'\1 \2', text)
+    
+    return text
+
+
+def merge_short_paragraphs(paragraphs: list[str]) -> list[str]:
+    """Merge paragraphs that are likely OCR page-break artifacts.
+    
+    A paragraph starting with lowercase or a continuation word is probably
+    a page-break artifact, not a real paragraph break.
+    """
+    if len(paragraphs) < 2:
+        return paragraphs
+    
+    merged = [paragraphs[0]]
+    for para in paragraphs[1:]:
+        prev = merged[-1]
+        # Merge if:
+        # 1. Previous doesn't end with sentence-ending punctuation
+        # 2. Current starts with lowercase
+        should_merge = (
+            prev and
+            not prev.endswith(('.', '!', '?', ':', ';', '."', '!"', '?"', '."', '—')) and
+            para and para[0].islower()
+        )
+        if should_merge:
+            merged[-1] = prev + ' ' + para
+        else:
+            merged.append(para)
+    
+    return merged
 
 
 def body_to_paragraphs(text: str) -> list[str]:
@@ -215,10 +343,30 @@ def escape_xml(text: str) -> str:
         .replace('"', '&quot;'))
 
 
-def is_subheading(text: str) -> bool:
-    """Check if a short paragraph is actually a subheading."""
+def classify_short_text(text: str, section_title: str = '') -> str:
+    """Classify a short paragraph as 'subheading', 'strip', or 'paragraph'.
+    
+    - 'subheading': legitimate section subheading → keep as <h3>
+    - 'strip': duplicate of section title or page artifact → remove
+    - 'paragraph': not a heading → keep as <p>
+    """
     if len(text) > 100:
-        return False
+        return 'paragraph'
+    
+    # Normalize for comparison
+    title_norm = re.sub(r'[^\w\s]', '', section_title.lower()).strip()
+    text_norm = re.sub(r'[^\w\s]', '', text.lower()).strip()
+    
+    # Check if it's a duplicate of the section title (exact match only)
+    if title_norm and text_norm == title_norm:
+        return 'strip'
+    
+    # Check if it's a page artifact
+    if re.match(r'^vol\.\s*[ivxlcdm]+\.?$', text, re.IGNORECASE):
+        return 'strip'
+    if text.lower().strip('.') in ('the end', 'finis', 'fin'):
+        return 'strip'
+    
     # Known subheading patterns
     patterns = [
         r'^(PREFACE|INTRODUCTION|CONTENTS|INDEX)\.?$',
@@ -242,19 +390,28 @@ def is_subheading(text: str) -> bool:
         r'^(ADDITIONS AND CORRECTIONS)$',
         # Sub-sections within the chronology outline
         r'^(THE STORY|THE BURNING|THE LAWSUIT|THE VENGEANCE)$',
+        r'^(PUBLIC LIFE|THE ICELANDERS ABROAD|CONCLUSION)$',
+        # Sea-roving poem stanza headings
+        r'^(QUEEN GUNNHILLDA|ODIN|SIGMUND)',
         # Bare proper-name subheadings in essays
         r'^[A-Z][A-Z\s\.\-]{4,60}$',
     ]
     for pat in patterns:
         if re.match(pat, text):
-            return True
-    return False
+            return 'subheading'
+    return 'paragraph'
 
 
-def process_section(name: str, raw_text: str) -> tuple[list[str], list[dict]]:
+def is_subheading(text: str) -> bool:
+    """Backward-compatible wrapper."""
+    return classify_short_text(text) == 'subheading'
+
+
+def process_section(name: str, raw_text: str, word_dict: set = None) -> tuple[list[str], list[dict]]:
     """Process one section: strip headers, extract footnotes, build paragraphs.
     
-    Returns (paragraphs, footnotes).
+    Returns (paragraphs, footnotes) where footnotes have been numbered
+    with 'index' keys for linking.
     """
     # Strip comment header lines
     raw_text = '\n'.join(l for l in raw_text.split('\n') if not l.startswith('#'))
@@ -264,6 +421,7 @@ def process_section(name: str, raw_text: str) -> tuple[list[str], list[dict]]:
     
     all_body_text = []
     all_footnotes = []
+    note_idx = 0  # global note counter for this section
     
     for page_num, page_text in pages:
         # Strip running head from top of page
@@ -272,6 +430,13 @@ def process_section(name: str, raw_text: str) -> tuple[list[str], list[dict]]:
         # Extract footnotes from bottom of page
         body_text, footnotes = extract_page_footnotes(page_text)
         
+        # Tag footnote markers in body text with numbered placeholders
+        body_text, note_idx = tag_footnote_markers(body_text, footnotes, note_idx)
+        
+        # Assign indices to footnotes
+        for i, fn in enumerate(footnotes):
+            fn['index'] = note_idx - len(footnotes) + i + 1
+        
         all_body_text.append(body_text)
         all_footnotes.extend(footnotes)
     
@@ -279,6 +444,10 @@ def process_section(name: str, raw_text: str) -> tuple[list[str], list[dict]]:
     combined = '\n'.join(all_body_text)
     combined = join_hyphens(combined)
     paragraphs = body_to_paragraphs(combined)
+    
+    # Post-processing: fix OCR artifacts
+    paragraphs = [fix_missing_spaces(p, word_dict or set()) for p in paragraphs]
+    paragraphs = merge_short_paragraphs(paragraphs)
     
     return paragraphs, all_footnotes
 
@@ -296,10 +465,12 @@ def build_xhtml(sections: list[tuple[str, str, list[str], list[dict]]]) -> str:
         
         # Body paragraphs
         for para in paragraphs:
-            if is_subheading(para):
+            action = classify_short_text(para, title)
+            if action == 'subheading':
                 parts.append(f'<h3>{escape_xml(para)}</h3>')
-            else:
+            elif action == 'paragraph':
                 parts.append(f'<p>{escape_xml(para)}</p>')
+            # 'strip' → skip entirely
         
         # Footnote section for this part
         if footnotes:
@@ -324,12 +495,25 @@ def build_xhtml(sections: list[tuple[str, str, list[str], list[dict]]]) -> str:
 </html>"""
 
 
+def convert_fn_placeholders(text: str, short_name: str) -> str:
+    """Convert ⟦FN:N⟧ placeholders to SE-style noteref links."""
+    def replace_fn(m):
+        n = m.group(1)
+        note_id = f"note-{short_name}-{n}"
+        ref_id = f"noteref-{short_name}-{n}"
+        return f'<a id="{ref_id}" href="#{note_id}" epub:type="noteref"><sup>{n}</sup></a>'
+    return FN_PLACEHOLDER.sub(replace_fn, text)
+
+
 def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict],
                         short_name: str, section_type: str) -> str:
     """Build a single finished XHTML file for one section.
     
     Produces a complete, pipeline-ready XHTML file that the manifest builder
     and spine reorder will pick up automatically.
+    
+    Footnote markers in body text (⟦FN:N⟧ placeholders) are converted to
+    SE-style <a epub:type="noteref"> links. Notes get back-references.
     """
     # Determine epub:type based on section type
     if section_type == 'preface':
@@ -346,19 +530,28 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     # Body paragraphs
     for para in paragraphs:
-        if is_subheading(para):
+        action = classify_short_text(para, title)
+        if action == 'subheading':
             parts.append(f'\t\t\t<h3>{escape_xml(para)}</h3>')
-        else:
-            parts.append(f'\t\t\t<p>{escape_xml(para)}</p>')
+        elif action == 'paragraph':
+            # Escape XML entities first (before adding link tags)
+            para = escape_xml(para)
+            # Then convert FN placeholders to noteref links
+            para = convert_fn_placeholders(para, short_name)
+            parts.append(f'\t\t\t<p>{para}</p>')
+        # 'strip' → skip entirely
     
     # Footnote section for this part
     if footnotes:
         parts.append('\t\t\t<hr/>')
         parts.append('\t\t\t<h3 epub:type="title">Notes</h3>')
-        for i, fn in enumerate(footnotes, 1):
+        for fn in footnotes:
+            n = fn['index']
+            note_id = f"note-{short_name}-{n}"
+            ref_id = f"noteref-{short_name}-{n}"
             fn_text = escape_xml(fn['text'])
-            note_id = f"note-{short_name}-{i}"
-            parts.append(f'\t\t\t<p id="{note_id}" epub:type="endnote">{fn_text}</p>')
+            # Back-reference link before the note text
+            parts.append(f'\t\t\t<p id="{note_id}" epub:type="endnote"><a href="#{ref_id}">{n}</a> {fn_text}</p>')
     
     body_content = '\n'.join(parts)
     
@@ -406,7 +599,7 @@ def main():
         ('chronology-outline', 'intro-chronology-story.txt', "Chronology and Outline of the Story",
          'appendix-11.xhtml', 'appendix'),
         ('icelandic-chronology', 'icelandic-chronology.txt', "Icelandic Chronology",
-         'icelandic-chronology.xhtml', 'frontmatter'),
+         'appendix-15.xhtml', 'appendix'),
         ('sea-roving', 'essay-sea-roving.txt', "Sea-Roving and the Viking Spirit",
          'appendix-12.xhtml', 'appendix'),
         ('money-currency', 'essay-money-currency.txt', "Money and Currency in the Tenth Century",
@@ -414,6 +607,28 @@ def main():
         ('additions', 'additions-and-corrections.txt', "Additions and Corrections",
          'appendix-14.xhtml', 'appendix'),
     ]
+    
+    # Build word dictionary: system dict + PG chapters + supplement
+    word_dict = set()
+    # System dictionary (if available)
+    sys_dict_path = Path('/usr/share/dict/american-english')
+    if sys_dict_path.exists():
+        for line in sys_dict_path.read_text().splitlines():
+            w = line.strip().lower()
+            if w and len(w) >= 2:
+                word_dict.add(w)
+    # PG chapter words (saga-specific terms)
+    for ch_file in text_dir.glob('chapter-*.xhtml'):
+        ch_content = ch_file.read_text(encoding='utf-8')
+        ch_text = re.sub(r'<[^>]+>', ' ', ch_content)
+        word_dict.update(w.lower() for w in re.findall(r"[a-zA-Z']+", ch_text))
+    # Supplement
+    supp_path = args.book_dir / '.supplemental-dict.txt'
+    if supp_path.exists():
+        for line in supp_path.read_text().splitlines():
+            word_dict.update(w.strip().lower() for w in line.split() if w.strip())
+    
+    print(f"  Dictionary: {len(word_dict):,} words (system + PG + supplement)")
     
     total_footnotes = 0
     total_paragraphs = 0
@@ -425,7 +640,7 @@ def main():
             continue
         
         raw_text = filepath.read_text(encoding='utf-8')
-        paragraphs, footnotes = process_section(short_name, raw_text)
+        paragraphs, footnotes = process_section(short_name, raw_text, word_dict)
         
         total_footnotes += len(footnotes)
         total_paragraphs += len(paragraphs)
@@ -448,7 +663,7 @@ def main():
             if not filepath.exists():
                 continue
             raw_text = filepath.read_text(encoding='utf-8')
-            _, footnotes = process_section(short_name, raw_text)
+            _, footnotes = process_section(short_name, raw_text, word_dict)
             if footnotes:
                 f.write(f"\n=== {title} ({out_fname}) ===\n")
                 for i, fn in enumerate(footnotes, 1):
