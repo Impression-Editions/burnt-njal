@@ -528,8 +528,28 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     parts = []
     
+    # Image mapping: PLATE text → image file
+    PLATE_IMAGES = {
+        'PLATE 1': ('plate-1-ground-plan.jpg', 'Ground plan of the interior of an old Icelandic skáli (hall), showing high seats, hearths, doors, and sleeping places. Drawn by Sigurður Guðmundsson, Reykjavík.'),
+        'PLATE 2': ('plate-2-floor-plan.jpg', 'Floor plan of the old Icelandic skáli or hall, showing passages, porch, store-rooms, and pillar-doors. Engraved by Bartholomew & Co., Edinburgh.'),
+        'PLATE 3': ('plate-3-section-lengthways.jpg', 'Section lengthways of the old Icelandic skáli or hall, showing hangings, lofts, and internal structure.'),
+        'PLATE 4': ('plate-4-cross-section.jpg', 'Cross section at one end of the old Icelandic skáli or hall.'),
+    }
+    
     # Body paragraphs
     for para in paragraphs:
+        # Check for PLATE marker
+        plate_match = re.match(r'^PLATE (\d+)\.?\s*$', para.strip())
+        if plate_match:
+            plate_key = f'PLATE {plate_match.group(1)}'
+            if plate_key in PLATE_IMAGES:
+                img_file, alt_text = PLATE_IMAGES[plate_key]
+                parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-{plate_match.group(1)}">')
+                parts.append(f'\t\t\t\t<img src="../images/{img_file}" alt="{escape_xml(alt_text)}"/>')
+                parts.append(f'\t\t\t\t<figcaption><span epub:type="z3998:roman">{plate_match.group(1)}</span>. {escape_xml(alt_text)}</figcaption>')
+                parts.append(f'\t\t\t</figure>')
+                continue
+        
         action = classify_short_text(para, title)
         if action == 'subheading':
             parts.append(f'\t\t\t<h3>{escape_xml(para)}</h3>')
@@ -542,6 +562,18 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         # 'strip' → skip entirely
     
     # Footnote section for this part
+    
+    # Supplementary figures for specific sections
+    if short_name == 'chronology-outline':
+        parts.append('\t\t\t<figure class="full-page" id="plan-thingvalla">')
+        parts.append('\t\t\t\t<img src="../images/plan-thingvalla.jpg" alt="Plan of Thingvalla or Thingfield, showing Thingvalla Lake, the Great Rift (Almannagjá), Raven\'s Rift (Hrafnagjá), and surrounding landscape."/>')
+        parts.append('\t\t\t\t<figcaption>Plan of Thingvalla or Thingfield. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
+        parts.append('\t\t\t</figure>')
+        parts.append('\t\t\t<figure class="full-page" id="plan-almannagia">')
+        parts.append('\t\t\t\t<img src="../images/plan-almannagia-althing.jpg" alt="Enlarged plan of the Almannagjá and Althing, showing the Great Rift, booths, bridge, and the Hill of Laws (Lögberg)."/>')
+        parts.append('\t\t\t\t<figcaption>Enlarged plan of the Almannagjá and Althing. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
+        parts.append('\t\t\t</figure>')
+    
     if footnotes:
         parts.append('\t\t\t<hr/>')
         parts.append('\t\t\t<h3 epub:type="title">Notes</h3>')
