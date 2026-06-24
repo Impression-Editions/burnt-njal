@@ -255,7 +255,8 @@
 	<spine>
 		<itemref idref="titlepage.xhtml"/>
 		<itemref idref="imprint.xhtml"/>
-		<itemref idref="about-the-translator.xhtml"/>
+		<itemref idref="manuscript.xhtml"/>
+		<itemref idref="map.xhtml"/>
 		<itemref idref="chapter-1.xhtml"/>
 		<itemref idref="chapter-2.xhtml"/>
 		<itemref idref="chapter-3.xhtml"/>
@@ -415,9 +416,8 @@
 		<itemref idref="chapter-156.xhtml"/>
 		<itemref idref="chapter-157.xhtml"/>
 		<itemref idref="chapter-158.xhtml"/>
-		<itemref idref="manuscript.xhtml"/>
-		<itemref idref="map.xhtml"/>
+		<itemref idref="about-the-translator.xhtml"/>
 		<itemref idref="endnotes.xhtml"/>
 		<itemref idref="permissions.xhtml"/>
-</spine>
+	</spine>
 </package>
