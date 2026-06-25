@@ -2,30 +2,10 @@
 <se-lint-ignore>
 	<file path="*.jpg">
 		<ignore code="f-016">
-			<reason>IE preserves original IA scan resolution; size &gt;1.5MB is intentional for detail legibility</reason>
+			<reason>IE preserves original IA scan resolution; size >1.5MB is intentional for detail legibility</reason>
 		</ignore>
 		<ignore code="f-018">
-			<reason>IE preserves original IA scan resolution; &gt;4M pixels is intentional for detail legibility</reason>
-		</ignore>
-	</file>
-	<file path="appendix-6.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-7.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-8.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-9.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
+			<reason>IE preserves original IA scan resolution; >4M pixels is intentional for detail legibility</reason>
 		</ignore>
 	</file>
 	<file path="appendix-10.xhtml">
@@ -53,6 +33,26 @@
 		<ignore code="x-018">
 			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
 		</ignore>
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-6.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-7.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-8.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-9.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
@@ -90,11 +90,11 @@
 		</ignore>
 	</file>
 	<file path="content.opf">
-		<ignore code="m-040">
-			<reason>IE does not use SE image collection semantics</reason>
-		</ignore>
 		<ignore code="m-042">
 			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
+		</ignore>
+		<ignore code="m-040">
+			<reason>IE does not use SE image collection semantics</reason>
 		</ignore>
 		<ignore code="m-058">
 			<reason>IE subject vocabulary differs from SE</reason>
