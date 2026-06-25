@@ -650,6 +650,17 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     # Supplementary figures for specific sections
     if short_name == 'chronology-outline':
+        # Plates 2-4: Additional architectural drawings of the Icelandic hall
+        # These plates appear in the original edition after plate 1 but weren't
+        # marked with PLATE markers in the OCR text. Insert them after plate 1.
+        for plate_num, plate_key in [(2, 'PLATE 2'), (3, 'PLATE 3'), (4, 'PLATE 4')]:
+            if plate_key in PLATE_IMAGES:
+                img_file, alt_text = PLATE_IMAGES[plate_key]
+                parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-{plate_num}">')
+                parts.append(f'\t\t\t\t<img src="../images/{img_file}" alt="{escape_xml(alt_text)}"/>')
+                parts.append(f'\t\t\t\t<figcaption><span epub:type="z3998:roman">{plate_num}</span>. {escape_xml(alt_text)}</figcaption>')
+                parts.append(f'\t\t\t</figure>')
+        # Front view and maps
         parts.append('\t\t\t<figure class="full-page" id="front-view-icelandic-hall">')
         parts.append('\t\t\t\t<img src="../images/front-view-icelandic-hall.jpg" alt="Front view of the old Icelandic skáli or hall, showing the roofline, entrance porch, and surrounding landscape."/>')
         parts.append('\t\t\t\t<figcaption>Front view of the old Icelandic skáli or hall. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
