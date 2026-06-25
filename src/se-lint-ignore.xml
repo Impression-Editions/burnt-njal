@@ -162,46 +162,26 @@
 			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
 	</file>
-	<file path="plate-1.jpg">
-		<ignore code="f-018">
-			<reason>Original IA plate scan resolution preserved</reason>
-		</ignore>
-	</file>
+	
 	<file path="plate-2-floor-plan.jpg">
 		<ignore code="f-018">
 			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
 	</file>
-	<file path="plate-2.jpg">
-		<ignore code="f-018">
-			<reason>Original IA plate scan resolution preserved</reason>
-		</ignore>
-	</file>
+	
 	<file path="plate-3-section-lengthways.jpg">
 		<ignore code="f-018">
 			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
 	</file>
-	<file path="plate-3.jpg">
-		<ignore code="f-018">
-			<reason>Original IA plate scan resolution preserved</reason>
-		</ignore>
-	</file>
+	
 	<file path="plate-4-cross-section.jpg">
 		<ignore code="f-018">
 			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
 	</file>
-	<file path="plate-4.jpg">
-		<ignore code="f-018">
-			<reason>Original IA plate scan resolution preserved</reason>
-		</ignore>
-	</file>
-	<file path="plate-5.jpg">
-		<ignore code="f-018">
-			<reason>Original IA plate scan resolution preserved</reason>
-		</ignore>
-	</file>
+	
+	
 	<file path="preface.xhtml">
 		<ignore code="s-034">
 			<reason>Converted OCR preface with frontmatter semantic</reason>
