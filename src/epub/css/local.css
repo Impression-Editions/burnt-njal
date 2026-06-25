@@ -644,7 +644,7 @@ section[epub|type~="z3998:dedication"] p{
 	text-align: center;
 }
 
-/* === DATA TABLES === */
+
 /* For currency/metric tables in essays. Styled with borders and header emphasis. */
 table{
 	border-collapse: collapse;
@@ -667,4 +667,28 @@ thead th{
 
 tbody tr:nth-child(even){
 	background-color: transparent;
+}
+
+/* === DATA TABLES === */
+/* For currency/metric tables in essays. */
+table{
+	border-collapse: collapse;
+	margin: 1em auto;
+	width: 80%;
+	font-size: 0.85em;
+	table-layout: fixed;
+}
+th, td{
+	border: 1px solid #ccc;
+	padding: 0.3em 0.5em;
+	text-align: center;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+thead th{
+	background-color: #f0f0f0;
+	font-weight: bold;
+}
+tbody tr:nth-child(even){
+	background-color: #fafafa;
 }

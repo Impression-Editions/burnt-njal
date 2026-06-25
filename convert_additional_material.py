@@ -579,6 +579,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     # Image mapping: PLATE text → image file
     PLATE_IMAGES = {
+        'PLATE 1': ('plate-1-ground-plan.jpg', 'Ground plan of the interior of an old Icelandic skáli (hall), showing high seats, hearths, doors, and sleeping places. Drawn by Sigurður Guðmundsson, Reykjavík.'),
         'PLATE 2': ('plate-2-floor-plan.jpg', 'Floor plan of the old Icelandic skáli or hall, showing passages, porch, store-rooms, and pillar-doors. Engraved by Bartholomew & Co., Edinburgh.'),
         'PLATE 4': ('plate-4-cross-section.jpg', 'Cross section at one end of the old Icelandic skáli or hall.'),
     }
@@ -608,13 +609,9 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         plate_match = re.match(r'^PLATE (\d+)\.?\s*$', para.strip())
         if plate_match:
             plate_key = f'PLATE {plate_match.group(1)}'
-            # When PLATE 2 appears, output PLATE 1 first (moved here per editorial decision)
-            if plate_match.group(1) == '2':
-                p1_alt = 'Ground plan of the interior of an old Icelandic skáli (hall), showing high seats, hearths, doors, and sleeping places. Drawn by Sigurður Guðmundsson, Reykjavík.'
-                parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-1">')
-                parts.append(f'\t\t\t\t<img src="../images/plate-1-ground-plan.jpg" alt="{escape_xml(p1_alt)}"/>')
-                parts.append(f'\t\t\t\t<figcaption><span epub:type="z3998:roman">1</span>. {escape_xml(p1_alt)}</figcaption>')
-                parts.append(f'\t\t\t</figure>')
+            # Skip PLATE 1 inline — it's placed in supplementary section
+            if plate_match.group(1) == '1':
+                continue
             if plate_key in PLATE_IMAGES:
                 img_file, alt_text = PLATE_IMAGES[plate_key]
                 parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-{plate_match.group(1)}">')
@@ -708,7 +705,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         # Plates 2-4: Additional architectural drawings of the Icelandic hall
         # These plates appear in the original edition after plate 1 but weren't
         # marked with PLATE markers in the OCR text. Insert them after plate 1.
-        for plate_num, plate_key in [(2, 'PLATE 2'), (3, 'PLATE 3'), (4, 'PLATE 4')]:
+        for plate_num, plate_key in [(1, 'PLATE 1'), (2, 'PLATE 2'), (4, 'PLATE 4')]:
             if plate_key in PLATE_IMAGES:
                 img_file, alt_text = PLATE_IMAGES[plate_key]
                 parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-{plate_num}">')
