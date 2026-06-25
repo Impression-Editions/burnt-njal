@@ -34,9 +34,6 @@
 		</ignore>
 	</file>
 	<file path="appendix-12.xhtml">
-		<ignore code="x-017">
-			<reason>Repeated subheading text generates duplicate slugs</reason>
-		</ignore>
 		<ignore code="x-018">
 			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
 		</ignore>
@@ -74,14 +71,14 @@
 		<ignore code="s-011">
 			<reason>Chronology uses titlepage section structure</reason>
 		</ignore>
+		<ignore code="s-021">
+			<reason>Chronology title differs from heading by design</reason>
+		</ignore>
 		<ignore code="s-032">
 			<reason>z3998:chronology is a valid z3998 vocabulary value</reason>
 		</ignore>
 		<ignore code="s-049">
 			<reason>Chronology header uses titlepage layout</reason>
-		</ignore>
-		<ignore code="s-021">
-			<reason>Chronology title differs from heading by design</reason>
 		</ignore>
 	</file>
 	<file path="content.opf">
@@ -90,9 +87,6 @@
 		</ignore>
 		<ignore code="m-042">
 			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
-		</ignore>
-		<ignore code="m-056">
-			<reason>IE does not have SE author pages to link to</reason>
 		</ignore>
 		<ignore code="m-058">
 			<reason>IE subject vocabulary differs from SE</reason>
