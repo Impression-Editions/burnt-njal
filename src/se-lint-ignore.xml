@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <se-lint-ignore>
-	<file path="appendix-6.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-7.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-8.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-9.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
 	<file path="appendix-10.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
@@ -45,6 +25,26 @@
 		<ignore code="x-018">
 			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
 		</ignore>
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-6.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-7.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-8.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-9.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
@@ -82,11 +82,11 @@
 		</ignore>
 	</file>
 	<file path="content.opf">
-		<ignore code="m-040">
-			<reason>IE does not use SE image collection semantics</reason>
-		</ignore>
 		<ignore code="m-042">
 			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
+		</ignore>
+		<ignore code="m-040">
+			<reason>IE does not use SE image collection semantics</reason>
 		</ignore>
 		<ignore code="m-058">
 			<reason>IE subject vocabulary differs from SE</reason>
@@ -108,11 +108,6 @@
 			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
 	</file>
-	<file path="front-view-icelandic-hall.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for quality</reason>
-		</ignore>
-	</file>
 	<file path="local.css">
 		<ignore code="c-002">
 			<reason>CSS template includes selectors for features this book does not use</reason>
@@ -124,64 +119,11 @@
 			<reason>IE cover uses smaller font sizes for design elements</reason>
 		</ignore>
 	</file>
-	<file path="map-of-iceland-hq.jpg">
-		<ignore code="f-018">
-			<reason>High resolution scan needed for detail legibility</reason>
-		</ignore>
-	</file>
-	<file path="map-of-iceland.jpg">
-		<ignore code="f-016">
-			<reason>Original map scan preserved for detail</reason>
-		</ignore>
-		<ignore code="f-018">
-			<reason>Original map scan resolution preserved</reason>
-		</ignore>
-	</file>
-	<file path="map-sw-iceland.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
 	<file path="map.xhtml">
 		<ignore code="s-032">
 			<reason>z3998:map is a valid z3998 vocabulary value</reason>
 		</ignore>
 	</file>
-	<file path="plan-almannagia-althing.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
-	<file path="plan-thingvalla.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
-	<file path="plate-1-ground-plan.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
-	
-	<file path="plate-2-floor-plan.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
-	
-	<file path="plate-3-section-lengthways.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
-	
-	<file path="plate-4-cross-section.jpg">
-		<ignore code="f-018">
-			<reason>Original IA scan resolution preserved for detail</reason>
-		</ignore>
-	</file>
-	
-	
 	<file path="preface.xhtml">
 		<ignore code="s-034">
 			<reason>Converted OCR preface with frontmatter semantic</reason>
