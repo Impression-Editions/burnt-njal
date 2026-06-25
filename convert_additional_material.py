@@ -536,6 +536,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         section_semantic = 'appendix'
     
     parts = []
+    used_slugs = set()
     
     # Image mapping: PLATE text → image file
     PLATE_IMAGES = {
@@ -575,8 +576,14 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
                             ("To The", "to the"), ("And The", "and the")]:
                     heading_text = heading_text.replace(fix[0], fix[1])
             # Open new subsection with heading
-            # Use heading text to generate an id slug
+            # Use heading text to generate an id slug (with dedup)
             slug = re.sub(r'[^a-z0-9]+', '-', heading_text.lower().strip('.')).strip('-')
+            base_slug = slug
+            counter = 2
+            while slug in used_slugs:
+                slug = f'{base_slug}-{counter}'
+                counter += 1
+            used_slugs.add(slug)
             parts.append(f'\t\t\t<section id="{short_name}-{slug}">')
             parts.append(f'\t\t\t\t<h3>{escape_xml(heading_text)}</h3>')
             in_subsection = True
