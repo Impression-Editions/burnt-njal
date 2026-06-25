@@ -145,4 +145,60 @@
 			<reason>Titlepage is not a ToC entry</reason>
 		</ignore>
 	</file>
+	<file path="front-view-icelandic-hall.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for quality</reason>
+		</ignore>
+	</file>
+	<file path="map-of-iceland-hq.jpg">
+		<ignore code="f-018">
+			<reason>High resolution scan needed for detail legibility</reason>
+		</ignore>
+	</file>
+	<file path="map-of-iceland.jpg">
+		<ignore code="f-016">
+			<reason>Original map scan preserved for detail</reason>
+		</ignore>
+		<ignore code="f-018">
+			<reason>Original map scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="plate-1.jpg">
+		<ignore code="f-018">
+			<reason>Original IA plate scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="plate-2.jpg">
+		<ignore code="f-018">
+			<reason>Original IA plate scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="plate-3.jpg">
+		<ignore code="f-018">
+			<reason>Original IA plate scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="plate-4.jpg">
+		<ignore code="f-018">
+			<reason>Original IA plate scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="plate-5.jpg">
+		<ignore code="f-018">
+			<reason>Original IA plate scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="chapter-127.xhtml">
+		<ignore code="s-023">
+			<reason>Titlecase fix skipped: heading contains noteref anchor</reason>
+		</ignore>
+		<ignore code="m-045">
+			<reason>Heading text includes noteref anchor, not pure text</reason>
+		</ignore>
+	</file>
+	<file path="chronology.xhtml">
+		<ignore code="m-045">
+			<reason>Essay section title, not in PG chapter ToC</reason>
+		</ignore>
+	</file>
 </se-lint-ignore>
