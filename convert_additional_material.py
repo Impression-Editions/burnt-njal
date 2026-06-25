@@ -220,10 +220,12 @@ def join_hyphens(text: str) -> str:
     - Em-dash breaks: 'word—\\nword' → 'word—word'
     """
     # Hard hyphen at end of line: join without space
-    text = re.sub(r'([a-z])-\n([a-z])', r'\1\2', text)
-    text = re.sub(r'([A-Z][a-z]+)-\n([a-z])', r'\1\2', text)
+    # Use \w to handle Unicode letters (þ, ð, æ, é, etc.)
+    text = re.sub(r'(\w)-\n(\w)', r'\1\2', text)
+    # Also catch "word- \n word" (space after hyphen before newline)
+    text = re.sub(r'(\w)- \n(\w)', r'\1\2', text)
     # Soft break (no hyphen): add a space
-    text = re.sub(r'([a-z])\n([a-z])', r'\1 \2', text)
+    text = re.sub(r'(\w)\n(\w)', r'\1 \2', text)
     text = re.sub(r'([a-z,;:])\n([A-Z])', r'\1 \2', text)
     # Em-dash at end or beginning of line: join without adding space
     text = re.sub(r'—\n', '—', text)
@@ -456,9 +458,29 @@ def process_section(name: str, raw_text: str, word_dict: set = None) -> tuple[li
     
     # Post-processing: fix OCR artifacts
     paragraphs = [fix_missing_spaces(p, word_dict or set()) for p in paragraphs]
+    paragraphs = [fix_ocr_spacing(p) for p in paragraphs]
     paragraphs = merge_short_paragraphs(paragraphs)
     
     return paragraphs, all_footnotes
+
+
+def fix_ocr_spacing(text: str) -> str:
+    """Fix common OCR spacing artifacts in text content.
+    
+    Handles:
+    - Space before punctuation: "word !" → "word!"
+    - Hyphen+space within words: "Fjórðungs- þing" → "Fjórðungsþing"
+    """
+    # Remove space before punctuation (!, ?, ;, :, ,)
+    # But not inside HTML tags (there are none at this point — pure text)
+    text = re.sub(r' +([!?;:,])', r'\1', text)
+    
+    # Fix hyphen+space within words (OCR line-break artifacts)
+    # Pattern: lowercase/diacritic + hyphen + space + lowercase
+    # e.g., "þilividi- num" → "þilividinum", "Bár- ðar" → "Bárðar"
+    text = re.sub(r'(\w)- (\w)', r'\1\2', text)
+    
+    return text
 
 
 def build_xhtml(sections: list[tuple[str, str, list[str], list[dict]]]) -> str:
