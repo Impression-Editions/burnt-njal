@@ -341,6 +341,8 @@ def fix_ocr_spacing(text: str) -> str:
     t-041: space before semicolons/colons — 'word ;' → 'word;'
     t-033: space after em-dash — 'word— ' → 'word—'
     """
+    # Collapse double+ spaces (t-001)
+    text = re.sub(r"  +", " ", text)
     # Space before semicolons and colons
     text = re.sub(r'\s+([;:])', r'\1', text)
     return text

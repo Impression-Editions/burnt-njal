@@ -125,9 +125,6 @@
 		<ignore code="c-002">
 			<reason>CSS template includes selectors for features this book does not use</reason>
 		</ignore>
-		<ignore code="c-006">
-			<reason>Semantic types from SE vocabulary do not require local CSS rules</reason>
-		</ignore>
 		<ignore code="c-016">
 			<reason>IE uses text-align: left for cover wordmark centering</reason>
 		</ignore>
