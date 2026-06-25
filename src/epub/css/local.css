@@ -655,7 +655,7 @@ table{
 
 th,
 td{
-	border: 1px solid currentColor;
+	border: 1px solid;
 	padding: .4em .8em;
 	text-align: center;
 }
