@@ -26,17 +26,17 @@
 		</ignore>
 	</file>
 	<file path="appendix-11.xhtml">
-		<ignore code="x-018">
-			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
-		</ignore>
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
 		<ignore code="t-001">
 			<reason>OCR spacing artifacts in descriptive text may produce false double-space detection</reason>
 		</ignore>
 		<ignore code="t-025">
 			<reason>Image alt text uses straight quotes per HTML attribute convention</reason>
+		</ignore>
+		<ignore code="x-018">
+			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
+		</ignore>
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
 	</file>
 	<file path="appendix-12.xhtml">
