@@ -45,6 +45,11 @@
 			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
 		</ignore>
 	</file>
+	<file path="appendix-12.xhtml">
+		<ignore code="x-017">
+			<reason>Repeated subheading text generates duplicate slugs</reason>
+		</ignore>
+	</file>
 	<file path="appendix-13.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
@@ -55,9 +60,34 @@
 			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
 		</ignore>
 	</file>
+	<file path="appendix-15.xhtml">
+		<ignore code="m-045">
+			<reason>Appendix 15 heading not needed in ToC</reason>
+		</ignore>
+	</file>
+	<file path="appendix-15.xhtml">
+		<ignore code="f-007">
+			<reason>Appendix 15 excluded from manifest by design</reason>
+		</ignore>
+	</file>
+	<file path="chapter-144.xhtml">
+		<ignore code="x-017">
+			<reason>Duplicate noteref id from PG source split</reason>
+		</ignore>
+	</file>
 	<file path="chronology.xhtml">
 		<ignore code="s-032">
 			<reason>z3998:chronology is a valid z3998 vocabulary value</reason>
+		</ignore>
+	</file>
+	<file path="chronology.xhtml">
+		<ignore code="s-011">
+			<reason>Chronology uses titlepage section structure</reason>
+		</ignore>
+	</file>
+	<file path="chronology.xhtml">
+		<ignore code="s-049">
+			<reason>Chronology header uses titlepage layout</reason>
 		</ignore>
 	</file>
 	<file path="content.opf">
@@ -106,6 +136,11 @@
 			<reason>Historical scan — high resolution needed for geographic detail</reason>
 		</ignore>
 	</file>
+	<file path="map-of-iceland.jpg">
+		<ignore code="f-016">
+			<reason>Historical map scan — high resolution needed for place name legibility</reason>
+		</ignore>
+	</file>
 	<file path="map-sw-iceland.jpg">
 		<ignore code="f-018">
 			<reason>Historical scan from 1861 edition — shows scene of key saga events</reason>
@@ -151,23 +186,14 @@
 			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
 	</file>
+	<file path="preface.xhtml">
+		<ignore code="s-034">
+			<reason>Converted OCR preface with frontmatter semantic</reason>
+		</ignore>
+	</file>
 	<file path="titlepage.xhtml">
 		<ignore code="m-045">
 			<reason>Titlepage is not a ToC entry</reason>
 		</ignore>
 	</file>
-
-	<!-- f-016: Large image in compressed EPUB (historical scans) -->
-	<file path="map-of-iceland.jpg"><ignore code="f-016"><reason>Historical map scan — high resolution needed for place name legibility</reason></ignore></file>
-	<!-- s-011: Chronology has no id on body section by design -->
-	<file path="chronology.xhtml"><ignore code="s-011"><reason>Chronology uses titlepage section structure</reason></ignore></file>
-	<file path="chronology.xhtml"><ignore code="s-049"><reason>Chronology header uses titlepage layout</reason></ignore></file>
-	<!-- s-034: Preface uses frontmatter semantic -->
-	<file path="preface.xhtml"><ignore code="s-034"><reason>Converted OCR preface with frontmatter semantic</reason></ignore></file>
-	<!-- m-045: Appendix headings intentionally not in ToC -->
-	<file path="appendix-15.xhtml"><ignore code="m-045"><reason>Appendix 15 heading not needed in ToC</reason></ignore></file>
-	<file path="appendix-15.xhtml"><ignore code="f-007"><reason>Appendix 15 excluded from manifest by design</reason></ignore></file>
-	<!-- x-017: Duplicate slugs from repeated subheadings in OCR text -->
-	<file path="appendix-12.xhtml"><ignore code="x-017"><reason>Repeated subheading text generates duplicate slugs</reason></ignore></file>
-	<file path="chapter-144.xhtml"><ignore code="x-017"><reason>Duplicate noteref id from PG source split</reason></ignore></file>
 </se-lint-ignore>
