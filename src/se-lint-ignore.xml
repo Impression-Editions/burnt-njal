@@ -191,6 +191,11 @@
 			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
 	</file>
+	<file path="chapter-123.xhtml">
+		<ignore code="t-033">
+			<reason>U+2060 word joiner before em-dash from PG source, not a space</reason>
+		</ignore>
+	</file>
 	<file path="titlepage.xhtml">
 		<ignore code="m-045">
 			<reason>Titlepage is not a ToC entry</reason>
