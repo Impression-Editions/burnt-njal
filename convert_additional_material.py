@@ -579,11 +579,27 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     
     # Image mapping: PLATE text → image file
     PLATE_IMAGES = {
-        'PLATE 1': ('plate-1-ground-plan.jpg', 'Ground plan of the interior of an old Icelandic skáli (hall), showing high seats, hearths, doors, and sleeping places. Drawn by Sigurður Guðmundsson, Reykjavík.'),
         'PLATE 2': ('plate-2-floor-plan.jpg', 'Floor plan of the old Icelandic skáli or hall, showing passages, porch, store-rooms, and pillar-doors. Engraved by Bartholomew & Co., Edinburgh.'),
-        'PLATE 3': ('plate-3-section-lengthways.jpg', 'Section lengthways of the old Icelandic skáli or hall, showing hangings, lofts, and internal structure.'),
         'PLATE 4': ('plate-4-cross-section.jpg', 'Cross section at one end of the old Icelandic skáli or hall.'),
     }
+    
+    # Pre-process: merge consecutive markdown table rows into single blocks
+    merged_paras = []
+    i = 0
+    while i < len(paragraphs):
+        para = paragraphs[i].strip()
+        if para.startswith('|') and para.endswith('|'):
+            # Collect consecutive table rows
+            table_block = ['@@TABLE@@']
+            while i < len(paragraphs) and paragraphs[i].strip().startswith('|') and paragraphs[i].strip().endswith('|'):
+                table_block.append(paragraphs[i].strip())
+                i += 1
+            table_block.append('@@ENDTABLE@@')
+            merged_paras.append('\n'.join(table_block))
+        else:
+            merged_paras.append(paragraphs[i])
+            i += 1
+    paragraphs = merged_paras
     
     # Body paragraphs
     in_subsection = False
@@ -592,6 +608,13 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         plate_match = re.match(r'^PLATE (\d+)\.?\s*$', para.strip())
         if plate_match:
             plate_key = f'PLATE {plate_match.group(1)}'
+            # When PLATE 2 appears, output PLATE 1 first (moved here per editorial decision)
+            if plate_match.group(1) == '2':
+                p1_alt = 'Ground plan of the interior of an old Icelandic skáli (hall), showing high seats, hearths, doors, and sleeping places. Drawn by Sigurður Guðmundsson, Reykjavík.'
+                parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-1">')
+                parts.append(f'\t\t\t\t<img src="../images/plate-1-ground-plan.jpg" alt="{escape_xml(p1_alt)}"/>')
+                parts.append(f'\t\t\t\t<figcaption><span epub:type="z3998:roman">1</span>. {escape_xml(p1_alt)}</figcaption>')
+                parts.append(f'\t\t\t</figure>')
             if plate_key in PLATE_IMAGES:
                 img_file, alt_text = PLATE_IMAGES[plate_key]
                 parts.append(f'\t\t\t<figure class="full-page" id="{short_name}-plate-{plate_match.group(1)}">')
@@ -627,6 +650,38 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
             parts.append(f'\t\t\t\t<h3 epub:type="title">{escape_xml(heading_text)}</h3>')
             in_subsection = True
         elif action == 'paragraph':
+            # Check for pre-processed table block
+            if para.strip().startswith('@@TABLE@@'):
+                lines = para.strip().split('\n')
+                rows = [l for l in lines if not l.startswith('@@')]
+                if rows:
+                    parts.append('\t\t\t<table>')
+                    for ri, row in enumerate(rows):
+                        cells = [c.strip() for c in row.strip('|').split('|')]
+                        if ri == 0:
+                            parts.append('\t\t\t\t<thead><tr>' + ''.join(f'<th>{escape_xml(c)}</th>' for c in cells) + '</tr></thead>')
+                            parts.append('\t\t\t\t<tbody>')
+                        else:
+                            parts.append('\t\t\t\t<tr>' + ''.join(f'<td>{escape_xml(c)}</td>' for c in cells) + '</tr>')
+                    parts.append('\t\t\t\t</tbody>')
+                    parts.append('\t\t\t</table>')
+                continue
+            
+            # Check for standalone markdown-style table rows
+            if para.strip().startswith('|') and para.strip().endswith('|'):
+                # Collect all consecutive table rows
+                table_rows = [para.strip()]
+                # Peek ahead — but since we're iterating, just output this row
+                # as part of an ongoing table. Use a flag.
+                cells = [c.strip() for c in para.strip().strip('|').split('|')]
+                if not hasattr(try_merge, '_in_table'):
+                    try_merge._in_table = False
+                # First row = header
+                parts.append('\t\t\t<table>')
+                parts.append('\t\t\t\t<thead><tr>' + ''.join(f'<th>{escape_xml(c)}</th>' for c in cells) + '</tr></thead>')
+                parts.append('\t\t\t\t<tbody>')
+                continue
+            
             # Escape XML entities first (before adding link tags)
             para = escape_xml(para)
             # Fix OCR spacing errors after XML escaping
@@ -668,14 +723,6 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         parts.append('\t\t\t<figure class="full-page" id="plan-thingvalla">')
         parts.append('\t\t\t\t<img src="../images/plan-thingvalla.jpg" alt="Plan of Thingvalla or Thingfield, showing Thingvalla Lake, the Great Rift (Almannagjá), Raven\'s Rift (Hrafnagjá), and surrounding landscape."/>')
         parts.append('\t\t\t\t<figcaption>Plan of Thingvalla or Thingfield. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
-        parts.append('\t\t\t</figure>')
-        parts.append('\t\t\t<figure class="full-page" id="plan-almannagia">')
-        parts.append('\t\t\t\t<img src="../images/plan-almannagia-althing.jpg" alt="Enlarged plan of the Almannagjá and Althing, showing the Great Rift, booths, bridge, and the Hill of Laws (Lögberg)."/>')
-        parts.append('\t\t\t\t<figcaption>Enlarged plan of the Almannagjá and Althing. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
-        parts.append('\t\t\t</figure>')
-        parts.append('\t\t\t<figure class="full-page" id="map-sw-iceland">')
-        parts.append('\t\t\t\t<img src="../images/map-sw-iceland.jpg" alt="Map of the south-western portion of Iceland, showing saga sites including Bergthorsknoll, Lithend, and the Markar River."/>')
-        parts.append('\t\t\t\t<figcaption>Map of the south-western portion of Iceland. Engraved by Bartholomew &amp; Co., Edinburgh.</figcaption>')
         parts.append('\t\t\t</figure>')
     
     if footnotes:
@@ -738,8 +785,6 @@ def main():
          'appendix-10.xhtml', 'appendix'),
         ('chronology-outline', 'intro-chronology-story.txt', "Chronology and Outline of the Story",
          'appendix-11.xhtml', 'appendix'),
-        ('icelandic-chronology', 'icelandic-chronology.txt', "Icelandic Chronology",
-         'appendix-15.xhtml', 'appendix'),
         ('sea-roving', 'essay-sea-roving.txt', "Sea-Roving and the Viking Spirit",
          'appendix-12.xhtml', 'appendix'),
         ('money-currency', 'essay-money-currency.txt', "Money and Currency in the Tenth Century",
