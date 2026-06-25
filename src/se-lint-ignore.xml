@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <se-lint-ignore>
+	<file path="appendix-6.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-7.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-8.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-9.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
 	<file path="appendix-10.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
@@ -40,38 +60,17 @@
 			<reason>Appendix 15 heading not needed in ToC</reason>
 		</ignore>
 	</file>
-	<file path="appendix-6.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-7.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-8.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-9.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
 	<file path="chapter-123.xhtml">
 		<ignore code="t-033">
 			<reason>U+2060 word joiner before em-dash from PG source, not a space</reason>
 		</ignore>
 	</file>
 	<file path="chapter-127.xhtml">
-		<ignore code="s-021">
-			<reason>Title text contains em-dash which se-lint expects removed</reason>
-		</ignore>
-	
 		<ignore code="m-045">
 			<reason>Heading text includes noteref anchor, not pure text</reason>
+		</ignore>
+		<ignore code="s-021">
+			<reason>Title text contains em-dash which se-lint expects removed</reason>
 		</ignore>
 		<ignore code="s-023">
 			<reason>Titlecase fix skipped: heading contains noteref anchor</reason>
@@ -83,6 +82,9 @@
 		</ignore>
 	</file>
 	<file path="chronology.xhtml">
+		<ignore code="m-045">
+			<reason>Essay section title, not in PG chapter ToC</reason>
+		</ignore>
 		<ignore code="s-011">
 			<reason>Chronology uses titlepage section structure</reason>
 		</ignore>
@@ -94,10 +96,6 @@
 		</ignore>
 		<ignore code="s-049">
 			<reason>Chronology header uses titlepage layout</reason>
-		</ignore>
-	
-		<ignore code="m-045">
-			<reason>Essay section title, not in PG chapter ToC</reason>
 		</ignore>
 	</file>
 	<file path="content.opf">

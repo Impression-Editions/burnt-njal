@@ -1,1079 +1,1079 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ncx xmlns="http://www.daisy.org/z3998/2005/ncx/" version="2005-1" xml:lang="en-US">
 	<head>
-		<meta name="dtb:uid" content="https://impressioneditions.com/ebooks/george-webbe-dasent/burnt-njal/sir-george-webbe-dasent"/>
+		<meta content="https://impressioneditions.com/ebooks/george-webbe-dasent/burnt-njal/sir-george-webbe-dasent" name="dtb:uid"/>
 	</head>
 	<docTitle>
 		<text>Table of Contents</text>
 	</docTitle>
 	<navMap>
-	<navPoint id="navPoint-1" playOrder="1">
-		<navLabel>
-			<text>Burnt Njal</text>
-		</navLabel>
-		<content src="text/titlepage.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-2" playOrder="2">
-		<navLabel>
-			<text>Imprint</text>
-		</navLabel>
-		<content src="text/imprint.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-3" playOrder="3">
-		<navLabel>
-			<text>Preface</text>
-		</navLabel>
-		<content src="text/preface.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-4" playOrder="4">
-		<navLabel>
-			<text>Möðruvallabók</text>
-		</navLabel>
-		<content src="text/manuscript.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-5" playOrder="5">
-		<navLabel>
-			<text>Map of Iceland</text>
-		</navLabel>
-		<content src="text/map.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-6" playOrder="6">
-		<navLabel>
-			<text>Of Fiddle Mord</text>
-		</navLabel>
-		<content src="text/chapter-1.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-7" playOrder="7">
-		<navLabel>
-			<text>Hrut Woos Unna</text>
-		</navLabel>
-		<content src="text/chapter-2.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-8" playOrder="8">
-		<navLabel>
-			<text>Hrut and Gunnhillda, King’s Mother</text>
-		</navLabel>
-		<content src="text/chapter-3.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-9" playOrder="9">
-		<navLabel>
-			<text>Of Hrut’s Cruise</text>
-		</navLabel>
-		<content src="text/chapter-4.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-10" playOrder="10">
-		<navLabel>
-			<text>Atli Arnvid Son’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-5.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-11" playOrder="11">
-		<navLabel>
-			<text>Hrut Sails Out to Iceland</text>
-		</navLabel>
-		<content src="text/chapter-6.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-12" playOrder="12">
-		<navLabel>
-			<text>Unna Separates from Hrut</text>
-		</navLabel>
-		<content src="text/chapter-7.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-13" playOrder="13">
-		<navLabel>
-			<text>Mord Claims His Goods from Hrut</text>
-		</navLabel>
-		<content src="text/chapter-8.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-14" playOrder="14">
-		<navLabel>
-			<text>Thorwald Gets Hallgerda to Wife</text>
-		</navLabel>
-		<content src="text/chapter-9.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-15" playOrder="15">
-		<navLabel>
-			<text>Hallgerda’s Wedding</text>
-		</navLabel>
-		<content src="text/chapter-10.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-16" playOrder="16">
-		<navLabel>
-			<text>Thorwald’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-11.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-17" playOrder="17">
-		<navLabel>
-			<text>Thiostolf’s Flight</text>
-		</navLabel>
-		<content src="text/chapter-12.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-18" playOrder="18">
-		<navLabel>
-			<text>Glum’s Wooing</text>
-		</navLabel>
-		<content src="text/chapter-13.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-19" playOrder="19">
-		<navLabel>
-			<text>Glum’s Wedding</text>
-		</navLabel>
-		<content src="text/chapter-14.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-20" playOrder="20">
-		<navLabel>
-			<text>Thiostolf Goes to Glum’s House</text>
-		</navLabel>
-		<content src="text/chapter-15.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-21" playOrder="21">
-		<navLabel>
-			<text>Glum’s Sheep Hunt</text>
-		</navLabel>
-		<content src="text/chapter-16.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-22" playOrder="22">
-		<navLabel>
-			<text>Glum’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-17.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-23" playOrder="23">
-		<navLabel>
-			<text>Fiddle Mord’s Death</text>
-		</navLabel>
-		<content src="text/chapter-18.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-24" playOrder="24">
-		<navLabel>
-			<text>Gunnar Comes into the Story</text>
-		</navLabel>
-		<content src="text/chapter-19.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-25" playOrder="25">
-		<navLabel>
-			<text>Of Njal and His Children</text>
-		</navLabel>
-		<content src="text/chapter-20.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-26" playOrder="26">
-		<navLabel>
-			<text>Unna Goes to See Gunnar</text>
-		</navLabel>
-		<content src="text/chapter-21.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-27" playOrder="27">
-		<navLabel>
-			<text>Njal’s Advice</text>
-		</navLabel>
-		<content src="text/chapter-22.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-28" playOrder="28">
-		<navLabel>
-			<text>Huckster Hedinn</text>
-		</navLabel>
-		<content src="text/chapter-23.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-29" playOrder="29">
-		<navLabel>
-			<text>Gunnar and Hrut Strive at the Thing</text>
-		</navLabel>
-		<content src="text/chapter-24.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-30" playOrder="30">
-		<navLabel>
-			<text>Unna’s Second Wedding</text>
-		</navLabel>
-		<content src="text/chapter-25.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-31" playOrder="31">
-		<navLabel>
-			<text>Of Asgrim and His Children</text>
-		</navLabel>
-		<content src="text/chapter-26.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-32" playOrder="32">
-		<navLabel>
-			<text>Helgi Njal’s Son’s Wooing</text>
-		</navLabel>
-		<content src="text/chapter-27.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-33" playOrder="33">
-		<navLabel>
-			<text>Hallvard Comes Out to Iceland</text>
-		</navLabel>
-		<content src="text/chapter-28.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-34" playOrder="34">
-		<navLabel>
-			<text>Gunnar Goes Abroad</text>
-		</navLabel>
-		<content src="text/chapter-29.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-35" playOrder="35">
-		<navLabel>
-			<text>Gunnar Goes A-Sea-Roving</text>
-		</navLabel>
-		<content src="text/chapter-30.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-36" playOrder="36">
-		<navLabel>
-			<text>Gunnar Goes to King Harold Gorm’s Son and Earl Hacon</text>
-		</navLabel>
-		<content src="text/chapter-31.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-37" playOrder="37">
-		<navLabel>
-			<text>Gunnar Comes Out to Iceland</text>
-		</navLabel>
-		<content src="text/chapter-32.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-38" playOrder="38">
-		<navLabel>
-			<text>Gunnar’s Wooing</text>
-		</navLabel>
-		<content src="text/chapter-33.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-39" playOrder="39">
-		<navLabel>
-			<text>Of Thrain Sigfus’ Son</text>
-		</navLabel>
-		<content src="text/chapter-34.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-40" playOrder="40">
-		<navLabel>
-			<text>The Visit to Bergthorsknoll</text>
-		</navLabel>
-		<content src="text/chapter-35.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-41" playOrder="41">
-		<navLabel>
-			<text>Kol Slew Swart</text>
-		</navLabel>
-		<content src="text/chapter-36.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-42" playOrder="42">
-		<navLabel>
-			<text>The Slaying of Kol, Whom Atli Slew</text>
-		</navLabel>
-		<content src="text/chapter-37.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-43" playOrder="43">
-		<navLabel>
-			<text>The Killing of Atli the Thrall</text>
-		</navLabel>
-		<content src="text/chapter-38.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-44" playOrder="44">
-		<navLabel>
-			<text>The Slaying of Brynjolf the Unruly</text>
-		</navLabel>
-		<content src="text/chapter-39.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-45" playOrder="45">
-		<navLabel>
-			<text>Gunnar and Njal Make Peace About Brynjolf’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-40.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-46" playOrder="46">
-		<navLabel>
-			<text>Sigmund Comes Out to Iceland</text>
-		</navLabel>
-		<content src="text/chapter-41.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-47" playOrder="47">
-		<navLabel>
-			<text>The Slaying of Thord Freedmanson</text>
-		</navLabel>
-		<content src="text/chapter-42.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-48" playOrder="48">
-		<navLabel>
-			<text>Njal and Gunnar Make Peace for the Slaying of Thord</text>
-		</navLabel>
-		<content src="text/chapter-43.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-49" playOrder="49">
-		<navLabel>
-			<text>Sigmund Mocks Njal and His Sons</text>
-		</navLabel>
-		<content src="text/chapter-44.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-50" playOrder="50">
-		<navLabel>
-			<text>The Slaying of Sigmund and Skiolld</text>
-		</navLabel>
-		<content src="text/chapter-45.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-51" playOrder="51">
-		<navLabel>
-			<text>Of Gizur the White and Geir the Priest</text>
-		</navLabel>
-		<content src="text/chapter-46.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-52" playOrder="52">
-		<navLabel>
-			<text>Of Otkell in Kirkby</text>
-		</navLabel>
-		<content src="text/chapter-47.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-53" playOrder="53">
-		<navLabel>
-			<text>How Hallgerda Makes Malcolm Steal from Kirkby</text>
-		</navLabel>
-		<content src="text/chapter-48.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-54" playOrder="54">
-		<navLabel>
-			<text>Of Skamkell’s Evil Counsel</text>
-		</navLabel>
-		<content src="text/chapter-49.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-55" playOrder="55">
-		<navLabel>
-			<text>Of Skamkell’s Lying</text>
-		</navLabel>
-		<content src="text/chapter-50.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-56" playOrder="56">
-		<navLabel>
-			<text>Of Gunnar</text>
-		</navLabel>
-		<content src="text/chapter-51.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-57" playOrder="57">
-		<navLabel>
-			<text>Of Runolf, the Son of Wolf Aurpriest</text>
-		</navLabel>
-		<content src="text/chapter-52.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-58" playOrder="58">
-		<navLabel>
-			<text>How Otkell Rode over Gunnar</text>
-		</navLabel>
-		<content src="text/chapter-53.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-59" playOrder="59">
-		<navLabel>
-			<text>The Fight at Rangriver</text>
-		</navLabel>
-		<content src="text/chapter-54.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-60" playOrder="60">
-		<navLabel>
-			<text>Njal’s Advice to Gunnar</text>
-		</navLabel>
-		<content src="text/chapter-55.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-61" playOrder="61">
-		<navLabel>
-			<text>Gunnar and Geir the Priest Strive at the Thing</text>
-		</navLabel>
-		<content src="text/chapter-56.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-62" playOrder="62">
-		<navLabel>
-			<text>Of Starkad and His Sons</text>
-		</navLabel>
-		<content src="text/chapter-57.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-63" playOrder="63">
-		<navLabel>
-			<text>How Gunnar’s Horse Fought</text>
-		</navLabel>
-		<content src="text/chapter-58.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-64" playOrder="64">
-		<navLabel>
-			<text>Of Asgrim and Wolf Uggis’ Son</text>
-		</navLabel>
-		<content src="text/chapter-59.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-65" playOrder="65">
-		<navLabel>
-			<text>An Attack Against Gunnar Agreed On</text>
-		</navLabel>
-		<content src="text/chapter-60.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-66" playOrder="66">
-		<navLabel>
-			<text>Gunnar’s Dream</text>
-		</navLabel>
-		<content src="text/chapter-61.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-67" playOrder="67">
-		<navLabel>
-			<text>The Slaying of Hjort and Fourteen Men</text>
-		</navLabel>
-		<content src="text/chapter-62.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-68" playOrder="68">
-		<navLabel>
-			<text>Njal’s Counsel to Gunnar</text>
-		</navLabel>
-		<content src="text/chapter-63.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-69" playOrder="69">
-		<navLabel>
-			<text>Of Valgard and Mord</text>
-		</navLabel>
-		<content src="text/chapter-64.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-70" playOrder="70">
-		<navLabel>
-			<text>Of Fines and Atonements</text>
-		</navLabel>
-		<content src="text/chapter-65.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-71" playOrder="71">
-		<navLabel>
-			<text>Of Thorgeir Otkell’s Son</text>
-		</navLabel>
-		<content src="text/chapter-66.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-72" playOrder="72">
-		<navLabel>
-			<text>Of Thorgeir Starkad’s Son</text>
-		</navLabel>
-		<content src="text/chapter-67.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-73" playOrder="73">
-		<navLabel>
-			<text>Of Njal and Those Namesakes</text>
-		</navLabel>
-		<content src="text/chapter-68.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-74" playOrder="74">
-		<navLabel>
-			<text>Olaf the Peacock’s Gifts to Gunnar</text>
-		</navLabel>
-		<content src="text/chapter-69.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-75" playOrder="75">
-		<navLabel>
-			<text>Mord’s Counsel</text>
-		</navLabel>
-		<content src="text/chapter-70.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-76" playOrder="76">
-		<navLabel>
-			<text>The Slaying of Thorgeir Otkell’s Son</text>
-		</navLabel>
-		<content src="text/chapter-71.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-77" playOrder="77">
-		<navLabel>
-			<text>Of the Suits for Manslaughter at the Thing</text>
-		</navLabel>
-		<content src="text/chapter-72.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-78" playOrder="78">
-		<navLabel>
-			<text>Of the Atonement</text>
-		</navLabel>
-		<content src="text/chapter-73.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-79" playOrder="79">
-		<navLabel>
-			<text>Kolskegg Goes Abroad</text>
-		</navLabel>
-		<content src="text/chapter-74.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-80" playOrder="80">
-		<navLabel>
-			<text>The Riding to Lithend</text>
-		</navLabel>
-		<content src="text/chapter-75.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-81" playOrder="81">
-		<navLabel>
-			<text>Gunnar’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-76.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-82" playOrder="82">
-		<navLabel>
-			<text>Gunnar Sings a Song Dead</text>
-		</navLabel>
-		<content src="text/chapter-77.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-83" playOrder="83">
-		<navLabel>
-			<text>Gunnar of Lithend Avenged</text>
-		</navLabel>
-		<content src="text/chapter-78.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-84" playOrder="84">
-		<navLabel>
-			<text>Hogni Takes an Atonement for Gunnar’s Death</text>
-		</navLabel>
-		<content src="text/chapter-79.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-85" playOrder="85">
-		<navLabel>
-			<text>Of Kolskegg: How He Was Baptized</text>
-		</navLabel>
-		<content src="text/chapter-80.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-86" playOrder="86">
-		<navLabel>
-			<text>Of Thrain: How He Slew Kol</text>
-		</navLabel>
-		<content src="text/chapter-81.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-87" playOrder="87">
-		<navLabel>
-			<text>Njal’s Sons Sail Abroad</text>
-		</navLabel>
-		<content src="text/chapter-82.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-88" playOrder="88">
-		<navLabel>
-			<text>Of Kari Solmund’s Son</text>
-		</navLabel>
-		<content src="text/chapter-83.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-89" playOrder="89">
-		<navLabel>
-			<text>Of Earl Sigurd</text>
-		</navLabel>
-		<content src="text/chapter-84.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-90" playOrder="90">
-		<navLabel>
-			<text>The Battle with the Earls</text>
-		</navLabel>
-		<content src="text/chapter-85.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-91" playOrder="91">
-		<navLabel>
-			<text>Hrapp’s Voyage from Iceland</text>
-		</navLabel>
-		<content src="text/chapter-86.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-92" playOrder="92">
-		<navLabel>
-			<text>Thrain Took to Hrapp</text>
-		</navLabel>
-		<content src="text/chapter-87.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-93" playOrder="93">
-		<navLabel>
-			<text>Earl Hacon Fights with Njal’s Sons</text>
-		</navLabel>
-		<content src="text/chapter-88.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-94" playOrder="94">
-		<navLabel>
-			<text>Njal’s Sons and Kari Come Out to Iceland</text>
-		</navLabel>
-		<content src="text/chapter-89.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-95" playOrder="95">
-		<navLabel>
-			<text>The Quarrel of Njal’s Sons with Thrain Sigfus’ Son</text>
-		</navLabel>
-		<content src="text/chapter-90.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-96" playOrder="96">
-		<navLabel>
-			<text>Thrain Sigfus’ Son’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-91.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-97" playOrder="97">
-		<navLabel>
-			<text>Kettle Takes Hauskuld As His Foster-Son</text>
-		</navLabel>
-		<content src="text/chapter-92.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-98" playOrder="98">
-		<navLabel>
-			<text>Njal Takes Hauskuld to Foster</text>
-		</navLabel>
-		<content src="text/chapter-93.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-99" playOrder="99">
-		<navLabel>
-			<text>Of Flosi Thord’s Son</text>
-		</navLabel>
-		<content src="text/chapter-94.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-100" playOrder="100">
-		<navLabel>
-			<text>Of Hall of the Side</text>
-		</navLabel>
-		<content src="text/chapter-95.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-101" playOrder="101">
-		<navLabel>
-			<text>Of the Change of Faith</text>
-		</navLabel>
-		<content src="text/chapter-96.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-102" playOrder="102">
-		<navLabel>
-			<text>Of Thangbrand’s Journeys</text>
-		</navLabel>
-		<content src="text/chapter-97.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-103" playOrder="103">
-		<navLabel>
-			<text>Of Thangbrand and Gudleif</text>
-		</navLabel>
-		<content src="text/chapter-98.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-104" playOrder="104">
-		<navLabel>
-			<text>Of Gest Oddleif’s Son</text>
-		</navLabel>
-		<content src="text/chapter-99.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-105" playOrder="105">
-		<navLabel>
-			<text>Of Gizur the White and Hjallti</text>
-		</navLabel>
-		<content src="text/chapter-100.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-106" playOrder="106">
-		<navLabel>
-			<text>Of Thorgeir of Lightwater</text>
-		</navLabel>
-		<content src="text/chapter-101.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-107" playOrder="107">
-		<navLabel>
-			<text>The Wedding of Hauskuld, the Priest of Whiteness</text>
-		</navLabel>
-		<content src="text/chapter-102.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-108" playOrder="108">
-		<navLabel>
-			<text>The Slaying of Hauskuld Njal’s Son</text>
-		</navLabel>
-		<content src="text/chapter-103.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-109" playOrder="109">
-		<navLabel>
-			<text>The Slaying of Lyting’s Brothers</text>
-		</navLabel>
-		<content src="text/chapter-104.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-110" playOrder="110">
-		<navLabel>
-			<text>Of Amund the Blind</text>
-		</navLabel>
-		<content src="text/chapter-105.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-111" playOrder="111">
-		<navLabel>
-			<text>Of Valgard the Guileful</text>
-		</navLabel>
-		<content src="text/chapter-106.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-112" playOrder="112">
-		<navLabel>
-			<text>Of Mord and Njal’s Sons</text>
-		</navLabel>
-		<content src="text/chapter-107.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-113" playOrder="113">
-		<navLabel>
-			<text>Of the Slander of Mord Valgard’s Son</text>
-		</navLabel>
-		<content src="text/chapter-108.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-114" playOrder="114">
-		<navLabel>
-			<text>Of Mord and Njal’s Sons</text>
-		</navLabel>
-		<content src="text/chapter-109.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-115" playOrder="115">
-		<navLabel>
-			<text>The Slaying of Hauskuld, the Priest of Whiteness</text>
-		</navLabel>
-		<content src="text/chapter-110.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-116" playOrder="116">
-		<navLabel>
-			<text>Of Hildigunna and Mord Valgard’s Son</text>
-		</navLabel>
-		<content src="text/chapter-111.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-117" playOrder="117">
-		<navLabel>
-			<text>The Pedigree of Gudmund the Powerful</text>
-		</navLabel>
-		<content src="text/chapter-112.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-118" playOrder="118">
-		<navLabel>
-			<text>Of Snorri the Priest, and His Stock</text>
-		</navLabel>
-		<content src="text/chapter-113.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-119" playOrder="119">
-		<navLabel>
-			<text>Of Flosi Thord’s Son</text>
-		</navLabel>
-		<content src="text/chapter-114.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-120" playOrder="120">
-		<navLabel>
-			<text>Of Flosi and Hildigunna</text>
-		</navLabel>
-		<content src="text/chapter-115.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-121" playOrder="121">
-		<navLabel>
-			<text>Of Flosi and Mord and the Sons of Sigfus</text>
-		</navLabel>
-		<content src="text/chapter-116.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-122" playOrder="122">
-		<navLabel>
-			<text>Njal and Skarphedinn Talk Together</text>
-		</navLabel>
-		<content src="text/chapter-117.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-123" playOrder="123">
-		<navLabel>
-			<text>Asgrim and Njal’s Sons Pray Men for Help</text>
-		</navLabel>
-		<content src="text/chapter-118.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-124" playOrder="124">
-		<navLabel>
-			<text>Of Skarphedinn and Thorkel Foulmouth</text>
-		</navLabel>
-		<content src="text/chapter-119.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-125" playOrder="125">
-		<navLabel>
-			<text>Of the Pleading of the Suit</text>
-		</navLabel>
-		<content src="text/chapter-120.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-126" playOrder="126">
-		<navLabel>
-			<text>Of the Award of Atonement Between Flosi and Njal</text>
-		</navLabel>
-		<content src="text/chapter-121.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-127" playOrder="127">
-		<navLabel>
-			<text>Of the Judges</text>
-		</navLabel>
-		<content src="text/chapter-122.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-128" playOrder="128">
-		<navLabel>
-			<text>An Attack Planned on Njal and His Sons</text>
-		</navLabel>
-		<content src="text/chapter-123.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-129" playOrder="129">
-		<navLabel>
-			<text>Of Portents</text>
-		</navLabel>
-		<content src="text/chapter-124.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-130" playOrder="130">
-		<navLabel>
-			<text>Flosi’s Journey from Home</text>
-		</navLabel>
-		<content src="text/chapter-125.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-131" playOrder="131">
-		<navLabel>
-			<text>Of Portents at Bergthorsknoll</text>
-		</navLabel>
-		<content src="text/chapter-126.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-132" playOrder="132">
-		<navLabel>
-			<text>The Onslaught1 On Bergthorsknoll</text>
-		</navLabel>
-		<content src="text/chapter-127.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-133" playOrder="133">
-		<navLabel>
-			<text>Njal’s Burning</text>
-		</navLabel>
-		<content src="text/chapter-128.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-134" playOrder="134">
-		<navLabel>
-			<text>Skarphedinn’s Death</text>
-		</navLabel>
-		<content src="text/chapter-129.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-135" playOrder="135">
-		<navLabel>
-			<text>Of Kari Solmund’s Son</text>
-		</navLabel>
-		<content src="text/chapter-130.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-136" playOrder="136">
-		<navLabel>
-			<text>Njal’s and Bergthora’s Bones Found</text>
-		</navLabel>
-		<content src="text/chapter-131.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-137" playOrder="137">
-		<navLabel>
-			<text>Flosi’s Dream</text>
-		</navLabel>
-		<content src="text/chapter-132.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-138" playOrder="138">
-		<navLabel>
-			<text>Of Flosi’s Journey and His Asking for Help</text>
-		</navLabel>
-		<content src="text/chapter-133.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-139" playOrder="139">
-		<navLabel>
-			<text>Of Thorhall and Kari</text>
-		</navLabel>
-		<content src="text/chapter-134.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-140" playOrder="140">
-		<navLabel>
-			<text>Of Flosi and the Burners</text>
-		</navLabel>
-		<content src="text/chapter-135.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-141" playOrder="141">
-		<navLabel>
-			<text>Of Thorgeir Craggeir</text>
-		</navLabel>
-		<content src="text/chapter-136.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-142" playOrder="142">
-		<navLabel>
-			<text>Of Eyjolf Bolverk’s Son</text>
-		</navLabel>
-		<content src="text/chapter-137.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-143" playOrder="143">
-		<navLabel>
-			<text>Of Asgrim, and Gizur, and Kari</text>
-		</navLabel>
-		<content src="text/chapter-138.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-144" playOrder="144">
-		<navLabel>
-			<text>Of Asgrim and Gudmund</text>
-		</navLabel>
-		<content src="text/chapter-139.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-145" playOrder="145">
-		<navLabel>
-			<text>Of the Declarations of the Suits</text>
-		</navLabel>
-		<content src="text/chapter-140.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-146" playOrder="146">
-		<navLabel>
-			<text>Now Men Go to the Courts</text>
-		</navLabel>
-		<content src="text/chapter-141.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-147" playOrder="147">
-		<navLabel>
-			<text>Of Eyjolf Bolverk’s Son</text>
-		</navLabel>
-		<content src="text/chapter-142.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-148" playOrder="148">
-		<navLabel>
-			<text>The Counsel of Thorhall Asgrim’s Son</text>
-		</navLabel>
-		<content src="text/chapter-143.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-149" playOrder="149">
-		<navLabel>
-			<text>Battle at the Althing</text>
-		</navLabel>
-		<content src="text/chapter-144.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-150" playOrder="150">
-		<navLabel>
-			<text>Of Kari and Thorgeir</text>
-		</navLabel>
-		<content src="text/chapter-145.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-151" playOrder="151">
-		<navLabel>
-			<text>The Award of Atonement with Thorgeir Craggeir</text>
-		</navLabel>
-		<content src="text/chapter-146.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-152" playOrder="152">
-		<navLabel>
-			<text>Kari Comes to Bjorn’s House in the Mark</text>
-		</navLabel>
-		<content src="text/chapter-147.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-153" playOrder="153">
-		<navLabel>
-			<text>Of Flosi and the Burners</text>
-		</navLabel>
-		<content src="text/chapter-148.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-154" playOrder="154">
-		<navLabel>
-			<text>Of Kari and Bjorn</text>
-		</navLabel>
-		<content src="text/chapter-149.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-155" playOrder="155">
-		<navLabel>
-			<text>More of Kari and Bjorn</text>
-		</navLabel>
-		<content src="text/chapter-150.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-156" playOrder="156">
-		<navLabel>
-			<text>Of Kari and Bjorn and Thorgeir</text>
-		</navLabel>
-		<content src="text/chapter-151.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-157" playOrder="157">
-		<navLabel>
-			<text>Flosi Goes Abroad</text>
-		</navLabel>
-		<content src="text/chapter-152.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-158" playOrder="158">
-		<navLabel>
-			<text>Kari Goes Abroad</text>
-		</navLabel>
-		<content src="text/chapter-153.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-159" playOrder="159">
-		<navLabel>
-			<text>Gunnar Lambi’s Son’s Slaying</text>
-		</navLabel>
-		<content src="text/chapter-154.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-160" playOrder="160">
-		<navLabel>
-			<text>Of Signs and Wonders</text>
-		</navLabel>
-		<content src="text/chapter-155.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-161" playOrder="161">
-		<navLabel>
-			<text>The Woof of War</text>
-		</navLabel>
-		<content src="text/chapter-156-a.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-162" playOrder="162">
-		<navLabel>
-			<text>Brian’s Battle</text>
-		</navLabel>
-		<content src="text/chapter-156.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-163" playOrder="163">
-		<navLabel>
-			<text>The Slaying of Kol Thorstein’s Son</text>
-		</navLabel>
-		<content src="text/chapter-157.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-164" playOrder="164">
-		<navLabel>
-			<text>Of Flosi and Kari</text>
-		</navLabel>
-		<content src="text/chapter-158.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-165" playOrder="165">
-		<navLabel>
-			<text>Icelandic Chronology</text>
-		</navLabel>
-		<content src="text/chronology.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-166" playOrder="166">
-		<navLabel>
-			<text>Additions and Corrections</text>
-		</navLabel>
-		<content src="text/appendix-14.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-167" playOrder="167">
-		<navLabel>
-			<text>Chronology and Outline of the Story</text>
-		</navLabel>
-		<content src="text/appendix-11.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-168" playOrder="168">
-		<navLabel>
-			<text>Physical Features</text>
-		</navLabel>
-		<content src="text/appendix-6.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-169" playOrder="169">
-		<navLabel>
-			<text>Religion of the Race</text>
-		</navLabel>
-		<content src="text/appendix-7.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-170" playOrder="170">
-		<navLabel>
-			<text>Social Principles</text>
-		</navLabel>
-		<content src="text/appendix-8.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-171" playOrder="171">
-		<navLabel>
-			<text>The Icelandic Commonwealth</text>
-		</navLabel>
-		<content src="text/appendix-9.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-172" playOrder="172">
-		<navLabel>
-			<text>Chief Settlers in the South-West</text>
-		</navLabel>
-		<content src="text/appendix-10.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-173" playOrder="173">
-		<navLabel>
-			<text>Sea-Roving and the Viking Spirit</text>
-		</navLabel>
-		<content src="text/appendix-12.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-174" playOrder="174">
-		<navLabel>
-			<text>Money and Currency in the Tenth Century</text>
-		</navLabel>
-		<content src="text/appendix-13.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-175" playOrder="175">
-		<navLabel>
-			<text>Endnotes</text>
-		</navLabel>
-		<content src="text/endnotes.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-176" playOrder="176">
-		<navLabel>
-			<text>About the Translator</text>
-		</navLabel>
-		<content src="text/about-the-translator.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-177" playOrder="177">
-		<navLabel>
-			<text>Copyright &amp; Permissions</text>
-		</navLabel>
-		<content src="text/permissions.xhtml"/>
-	</navPoint>
-	<navPoint id="navPoint-178" playOrder="178">
-		<navLabel>
-			<text>Icelandic Chronology</text>
-		</navLabel>
-		<content src="text/appendix-15.xhtml"/>
-	</navPoint>
+		<navPoint id="navPoint-1" playOrder="1">
+			<navLabel>
+				<text>Burnt Njal</text>
+			</navLabel>
+			<content src="text/titlepage.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-2" playOrder="2">
+			<navLabel>
+				<text>Imprint</text>
+			</navLabel>
+			<content src="text/imprint.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-3" playOrder="3">
+			<navLabel>
+				<text>Preface</text>
+			</navLabel>
+			<content src="text/preface.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-4" playOrder="4">
+			<navLabel>
+				<text>Möðruvallabók</text>
+			</navLabel>
+			<content src="text/manuscript.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-5" playOrder="5">
+			<navLabel>
+				<text>Map of Iceland</text>
+			</navLabel>
+			<content src="text/map.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-6" playOrder="6">
+			<navLabel>
+				<text>Of Fiddle Mord</text>
+			</navLabel>
+			<content src="text/chapter-1.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-7" playOrder="7">
+			<navLabel>
+				<text>Hrut Woos Unna</text>
+			</navLabel>
+			<content src="text/chapter-2.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-8" playOrder="8">
+			<navLabel>
+				<text>Hrut and Gunnhillda, King’s Mother</text>
+			</navLabel>
+			<content src="text/chapter-3.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-9" playOrder="9">
+			<navLabel>
+				<text>Of Hrut’s Cruise</text>
+			</navLabel>
+			<content src="text/chapter-4.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-10" playOrder="10">
+			<navLabel>
+				<text>Atli Arnvid Son’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-5.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-11" playOrder="11">
+			<navLabel>
+				<text>Hrut Sails Out to Iceland</text>
+			</navLabel>
+			<content src="text/chapter-6.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-12" playOrder="12">
+			<navLabel>
+				<text>Unna Separates from Hrut</text>
+			</navLabel>
+			<content src="text/chapter-7.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-13" playOrder="13">
+			<navLabel>
+				<text>Mord Claims His Goods from Hrut</text>
+			</navLabel>
+			<content src="text/chapter-8.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-14" playOrder="14">
+			<navLabel>
+				<text>Thorwald Gets Hallgerda to Wife</text>
+			</navLabel>
+			<content src="text/chapter-9.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-15" playOrder="15">
+			<navLabel>
+				<text>Hallgerda’s Wedding</text>
+			</navLabel>
+			<content src="text/chapter-10.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-16" playOrder="16">
+			<navLabel>
+				<text>Thorwald’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-11.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-17" playOrder="17">
+			<navLabel>
+				<text>Thiostolf’s Flight</text>
+			</navLabel>
+			<content src="text/chapter-12.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-18" playOrder="18">
+			<navLabel>
+				<text>Glum’s Wooing</text>
+			</navLabel>
+			<content src="text/chapter-13.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-19" playOrder="19">
+			<navLabel>
+				<text>Glum’s Wedding</text>
+			</navLabel>
+			<content src="text/chapter-14.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-20" playOrder="20">
+			<navLabel>
+				<text>Thiostolf Goes to Glum’s House</text>
+			</navLabel>
+			<content src="text/chapter-15.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-21" playOrder="21">
+			<navLabel>
+				<text>Glum’s Sheep Hunt</text>
+			</navLabel>
+			<content src="text/chapter-16.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-22" playOrder="22">
+			<navLabel>
+				<text>Glum’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-17.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-23" playOrder="23">
+			<navLabel>
+				<text>Fiddle Mord’s Death</text>
+			</navLabel>
+			<content src="text/chapter-18.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-24" playOrder="24">
+			<navLabel>
+				<text>Gunnar Comes into the Story</text>
+			</navLabel>
+			<content src="text/chapter-19.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-25" playOrder="25">
+			<navLabel>
+				<text>Of Njal and His Children</text>
+			</navLabel>
+			<content src="text/chapter-20.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-26" playOrder="26">
+			<navLabel>
+				<text>Unna Goes to See Gunnar</text>
+			</navLabel>
+			<content src="text/chapter-21.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-27" playOrder="27">
+			<navLabel>
+				<text>Njal’s Advice</text>
+			</navLabel>
+			<content src="text/chapter-22.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-28" playOrder="28">
+			<navLabel>
+				<text>Huckster Hedinn</text>
+			</navLabel>
+			<content src="text/chapter-23.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-29" playOrder="29">
+			<navLabel>
+				<text>Gunnar and Hrut Strive at the Thing</text>
+			</navLabel>
+			<content src="text/chapter-24.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-30" playOrder="30">
+			<navLabel>
+				<text>Unna’s Second Wedding</text>
+			</navLabel>
+			<content src="text/chapter-25.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-31" playOrder="31">
+			<navLabel>
+				<text>Of Asgrim and His Children</text>
+			</navLabel>
+			<content src="text/chapter-26.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-32" playOrder="32">
+			<navLabel>
+				<text>Helgi Njal’s Son’s Wooing</text>
+			</navLabel>
+			<content src="text/chapter-27.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-33" playOrder="33">
+			<navLabel>
+				<text>Hallvard Comes Out to Iceland</text>
+			</navLabel>
+			<content src="text/chapter-28.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-34" playOrder="34">
+			<navLabel>
+				<text>Gunnar Goes Abroad</text>
+			</navLabel>
+			<content src="text/chapter-29.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-35" playOrder="35">
+			<navLabel>
+				<text>Gunnar Goes A-Sea-Roving</text>
+			</navLabel>
+			<content src="text/chapter-30.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-36" playOrder="36">
+			<navLabel>
+				<text>Gunnar Goes to King Harold Gorm’s Son and Earl Hacon</text>
+			</navLabel>
+			<content src="text/chapter-31.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-37" playOrder="37">
+			<navLabel>
+				<text>Gunnar Comes Out to Iceland</text>
+			</navLabel>
+			<content src="text/chapter-32.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-38" playOrder="38">
+			<navLabel>
+				<text>Gunnar’s Wooing</text>
+			</navLabel>
+			<content src="text/chapter-33.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-39" playOrder="39">
+			<navLabel>
+				<text>Of Thrain Sigfus’ Son</text>
+			</navLabel>
+			<content src="text/chapter-34.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-40" playOrder="40">
+			<navLabel>
+				<text>The Visit to Bergthorsknoll</text>
+			</navLabel>
+			<content src="text/chapter-35.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-41" playOrder="41">
+			<navLabel>
+				<text>Kol Slew Swart</text>
+			</navLabel>
+			<content src="text/chapter-36.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-42" playOrder="42">
+			<navLabel>
+				<text>The Slaying of Kol, Whom Atli Slew</text>
+			</navLabel>
+			<content src="text/chapter-37.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-43" playOrder="43">
+			<navLabel>
+				<text>The Killing of Atli the Thrall</text>
+			</navLabel>
+			<content src="text/chapter-38.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-44" playOrder="44">
+			<navLabel>
+				<text>The Slaying of Brynjolf the Unruly</text>
+			</navLabel>
+			<content src="text/chapter-39.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-45" playOrder="45">
+			<navLabel>
+				<text>Gunnar and Njal Make Peace About Brynjolf’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-40.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-46" playOrder="46">
+			<navLabel>
+				<text>Sigmund Comes Out to Iceland</text>
+			</navLabel>
+			<content src="text/chapter-41.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-47" playOrder="47">
+			<navLabel>
+				<text>The Slaying of Thord Freedmanson</text>
+			</navLabel>
+			<content src="text/chapter-42.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-48" playOrder="48">
+			<navLabel>
+				<text>Njal and Gunnar Make Peace for the Slaying of Thord</text>
+			</navLabel>
+			<content src="text/chapter-43.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-49" playOrder="49">
+			<navLabel>
+				<text>Sigmund Mocks Njal and His Sons</text>
+			</navLabel>
+			<content src="text/chapter-44.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-50" playOrder="50">
+			<navLabel>
+				<text>The Slaying of Sigmund and Skiolld</text>
+			</navLabel>
+			<content src="text/chapter-45.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-51" playOrder="51">
+			<navLabel>
+				<text>Of Gizur the White and Geir the Priest</text>
+			</navLabel>
+			<content src="text/chapter-46.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-52" playOrder="52">
+			<navLabel>
+				<text>Of Otkell in Kirkby</text>
+			</navLabel>
+			<content src="text/chapter-47.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-53" playOrder="53">
+			<navLabel>
+				<text>How Hallgerda Makes Malcolm Steal from Kirkby</text>
+			</navLabel>
+			<content src="text/chapter-48.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-54" playOrder="54">
+			<navLabel>
+				<text>Of Skamkell’s Evil Counsel</text>
+			</navLabel>
+			<content src="text/chapter-49.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-55" playOrder="55">
+			<navLabel>
+				<text>Of Skamkell’s Lying</text>
+			</navLabel>
+			<content src="text/chapter-50.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-56" playOrder="56">
+			<navLabel>
+				<text>Of Gunnar</text>
+			</navLabel>
+			<content src="text/chapter-51.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-57" playOrder="57">
+			<navLabel>
+				<text>Of Runolf, the Son of Wolf Aurpriest</text>
+			</navLabel>
+			<content src="text/chapter-52.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-58" playOrder="58">
+			<navLabel>
+				<text>How Otkell Rode over Gunnar</text>
+			</navLabel>
+			<content src="text/chapter-53.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-59" playOrder="59">
+			<navLabel>
+				<text>The Fight at Rangriver</text>
+			</navLabel>
+			<content src="text/chapter-54.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-60" playOrder="60">
+			<navLabel>
+				<text>Njal’s Advice to Gunnar</text>
+			</navLabel>
+			<content src="text/chapter-55.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-61" playOrder="61">
+			<navLabel>
+				<text>Gunnar and Geir the Priest Strive at the Thing</text>
+			</navLabel>
+			<content src="text/chapter-56.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-62" playOrder="62">
+			<navLabel>
+				<text>Of Starkad and His Sons</text>
+			</navLabel>
+			<content src="text/chapter-57.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-63" playOrder="63">
+			<navLabel>
+				<text>How Gunnar’s Horse Fought</text>
+			</navLabel>
+			<content src="text/chapter-58.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-64" playOrder="64">
+			<navLabel>
+				<text>Of Asgrim and Wolf Uggis’ Son</text>
+			</navLabel>
+			<content src="text/chapter-59.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-65" playOrder="65">
+			<navLabel>
+				<text>An Attack Against Gunnar Agreed On</text>
+			</navLabel>
+			<content src="text/chapter-60.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-66" playOrder="66">
+			<navLabel>
+				<text>Gunnar’s Dream</text>
+			</navLabel>
+			<content src="text/chapter-61.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-67" playOrder="67">
+			<navLabel>
+				<text>The Slaying of Hjort and Fourteen Men</text>
+			</navLabel>
+			<content src="text/chapter-62.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-68" playOrder="68">
+			<navLabel>
+				<text>Njal’s Counsel to Gunnar</text>
+			</navLabel>
+			<content src="text/chapter-63.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-69" playOrder="69">
+			<navLabel>
+				<text>Of Valgard and Mord</text>
+			</navLabel>
+			<content src="text/chapter-64.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-70" playOrder="70">
+			<navLabel>
+				<text>Of Fines and Atonements</text>
+			</navLabel>
+			<content src="text/chapter-65.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-71" playOrder="71">
+			<navLabel>
+				<text>Of Thorgeir Otkell’s Son</text>
+			</navLabel>
+			<content src="text/chapter-66.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-72" playOrder="72">
+			<navLabel>
+				<text>Of Thorgeir Starkad’s Son</text>
+			</navLabel>
+			<content src="text/chapter-67.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-73" playOrder="73">
+			<navLabel>
+				<text>Of Njal and Those Namesakes</text>
+			</navLabel>
+			<content src="text/chapter-68.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-74" playOrder="74">
+			<navLabel>
+				<text>Olaf the Peacock’s Gifts to Gunnar</text>
+			</navLabel>
+			<content src="text/chapter-69.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-75" playOrder="75">
+			<navLabel>
+				<text>Mord’s Counsel</text>
+			</navLabel>
+			<content src="text/chapter-70.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-76" playOrder="76">
+			<navLabel>
+				<text>The Slaying of Thorgeir Otkell’s Son</text>
+			</navLabel>
+			<content src="text/chapter-71.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-77" playOrder="77">
+			<navLabel>
+				<text>Of the Suits for Manslaughter at the Thing</text>
+			</navLabel>
+			<content src="text/chapter-72.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-78" playOrder="78">
+			<navLabel>
+				<text>Of the Atonement</text>
+			</navLabel>
+			<content src="text/chapter-73.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-79" playOrder="79">
+			<navLabel>
+				<text>Kolskegg Goes Abroad</text>
+			</navLabel>
+			<content src="text/chapter-74.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-80" playOrder="80">
+			<navLabel>
+				<text>The Riding to Lithend</text>
+			</navLabel>
+			<content src="text/chapter-75.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-81" playOrder="81">
+			<navLabel>
+				<text>Gunnar’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-76.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-82" playOrder="82">
+			<navLabel>
+				<text>Gunnar Sings a Song Dead</text>
+			</navLabel>
+			<content src="text/chapter-77.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-83" playOrder="83">
+			<navLabel>
+				<text>Gunnar of Lithend Avenged</text>
+			</navLabel>
+			<content src="text/chapter-78.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-84" playOrder="84">
+			<navLabel>
+				<text>Hogni Takes an Atonement for Gunnar’s Death</text>
+			</navLabel>
+			<content src="text/chapter-79.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-85" playOrder="85">
+			<navLabel>
+				<text>Of Kolskegg: How He Was Baptized</text>
+			</navLabel>
+			<content src="text/chapter-80.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-86" playOrder="86">
+			<navLabel>
+				<text>Of Thrain: How He Slew Kol</text>
+			</navLabel>
+			<content src="text/chapter-81.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-87" playOrder="87">
+			<navLabel>
+				<text>Njal’s Sons Sail Abroad</text>
+			</navLabel>
+			<content src="text/chapter-82.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-88" playOrder="88">
+			<navLabel>
+				<text>Of Kari Solmund’s Son</text>
+			</navLabel>
+			<content src="text/chapter-83.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-89" playOrder="89">
+			<navLabel>
+				<text>Of Earl Sigurd</text>
+			</navLabel>
+			<content src="text/chapter-84.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-90" playOrder="90">
+			<navLabel>
+				<text>The Battle with the Earls</text>
+			</navLabel>
+			<content src="text/chapter-85.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-91" playOrder="91">
+			<navLabel>
+				<text>Hrapp’s Voyage from Iceland</text>
+			</navLabel>
+			<content src="text/chapter-86.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-92" playOrder="92">
+			<navLabel>
+				<text>Thrain Took to Hrapp</text>
+			</navLabel>
+			<content src="text/chapter-87.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-93" playOrder="93">
+			<navLabel>
+				<text>Earl Hacon Fights with Njal’s Sons</text>
+			</navLabel>
+			<content src="text/chapter-88.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-94" playOrder="94">
+			<navLabel>
+				<text>Njal’s Sons and Kari Come Out to Iceland</text>
+			</navLabel>
+			<content src="text/chapter-89.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-95" playOrder="95">
+			<navLabel>
+				<text>The Quarrel of Njal’s Sons with Thrain Sigfus’ Son</text>
+			</navLabel>
+			<content src="text/chapter-90.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-96" playOrder="96">
+			<navLabel>
+				<text>Thrain Sigfus’ Son’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-91.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-97" playOrder="97">
+			<navLabel>
+				<text>Kettle Takes Hauskuld As His Foster-Son</text>
+			</navLabel>
+			<content src="text/chapter-92.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-98" playOrder="98">
+			<navLabel>
+				<text>Njal Takes Hauskuld to Foster</text>
+			</navLabel>
+			<content src="text/chapter-93.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-99" playOrder="99">
+			<navLabel>
+				<text>Of Flosi Thord’s Son</text>
+			</navLabel>
+			<content src="text/chapter-94.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-100" playOrder="100">
+			<navLabel>
+				<text>Of Hall of the Side</text>
+			</navLabel>
+			<content src="text/chapter-95.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-101" playOrder="101">
+			<navLabel>
+				<text>Of the Change of Faith</text>
+			</navLabel>
+			<content src="text/chapter-96.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-102" playOrder="102">
+			<navLabel>
+				<text>Of Thangbrand’s Journeys</text>
+			</navLabel>
+			<content src="text/chapter-97.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-103" playOrder="103">
+			<navLabel>
+				<text>Of Thangbrand and Gudleif</text>
+			</navLabel>
+			<content src="text/chapter-98.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-104" playOrder="104">
+			<navLabel>
+				<text>Of Gest Oddleif’s Son</text>
+			</navLabel>
+			<content src="text/chapter-99.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-105" playOrder="105">
+			<navLabel>
+				<text>Of Gizur the White and Hjallti</text>
+			</navLabel>
+			<content src="text/chapter-100.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-106" playOrder="106">
+			<navLabel>
+				<text>Of Thorgeir of Lightwater</text>
+			</navLabel>
+			<content src="text/chapter-101.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-107" playOrder="107">
+			<navLabel>
+				<text>The Wedding of Hauskuld, the Priest of Whiteness</text>
+			</navLabel>
+			<content src="text/chapter-102.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-108" playOrder="108">
+			<navLabel>
+				<text>The Slaying of Hauskuld Njal’s Son</text>
+			</navLabel>
+			<content src="text/chapter-103.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-109" playOrder="109">
+			<navLabel>
+				<text>The Slaying of Lyting’s Brothers</text>
+			</navLabel>
+			<content src="text/chapter-104.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-110" playOrder="110">
+			<navLabel>
+				<text>Of Amund the Blind</text>
+			</navLabel>
+			<content src="text/chapter-105.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-111" playOrder="111">
+			<navLabel>
+				<text>Of Valgard the Guileful</text>
+			</navLabel>
+			<content src="text/chapter-106.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-112" playOrder="112">
+			<navLabel>
+				<text>Of Mord and Njal’s Sons</text>
+			</navLabel>
+			<content src="text/chapter-107.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-113" playOrder="113">
+			<navLabel>
+				<text>Of the Slander of Mord Valgard’s Son</text>
+			</navLabel>
+			<content src="text/chapter-108.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-114" playOrder="114">
+			<navLabel>
+				<text>Of Mord and Njal’s Sons</text>
+			</navLabel>
+			<content src="text/chapter-109.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-115" playOrder="115">
+			<navLabel>
+				<text>The Slaying of Hauskuld, the Priest of Whiteness</text>
+			</navLabel>
+			<content src="text/chapter-110.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-116" playOrder="116">
+			<navLabel>
+				<text>Of Hildigunna and Mord Valgard’s Son</text>
+			</navLabel>
+			<content src="text/chapter-111.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-117" playOrder="117">
+			<navLabel>
+				<text>The Pedigree of Gudmund the Powerful</text>
+			</navLabel>
+			<content src="text/chapter-112.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-118" playOrder="118">
+			<navLabel>
+				<text>Of Snorri the Priest, and His Stock</text>
+			</navLabel>
+			<content src="text/chapter-113.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-119" playOrder="119">
+			<navLabel>
+				<text>Of Flosi Thord’s Son</text>
+			</navLabel>
+			<content src="text/chapter-114.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-120" playOrder="120">
+			<navLabel>
+				<text>Of Flosi and Hildigunna</text>
+			</navLabel>
+			<content src="text/chapter-115.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-121" playOrder="121">
+			<navLabel>
+				<text>Of Flosi and Mord and the Sons of Sigfus</text>
+			</navLabel>
+			<content src="text/chapter-116.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-122" playOrder="122">
+			<navLabel>
+				<text>Njal and Skarphedinn Talk Together</text>
+			</navLabel>
+			<content src="text/chapter-117.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-123" playOrder="123">
+			<navLabel>
+				<text>Asgrim and Njal’s Sons Pray Men for Help</text>
+			</navLabel>
+			<content src="text/chapter-118.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-124" playOrder="124">
+			<navLabel>
+				<text>Of Skarphedinn and Thorkel Foulmouth</text>
+			</navLabel>
+			<content src="text/chapter-119.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-125" playOrder="125">
+			<navLabel>
+				<text>Of the Pleading of the Suit</text>
+			</navLabel>
+			<content src="text/chapter-120.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-126" playOrder="126">
+			<navLabel>
+				<text>Of the Award of Atonement Between Flosi and Njal</text>
+			</navLabel>
+			<content src="text/chapter-121.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-127" playOrder="127">
+			<navLabel>
+				<text>Of the Judges</text>
+			</navLabel>
+			<content src="text/chapter-122.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-128" playOrder="128">
+			<navLabel>
+				<text>An Attack Planned on Njal and His Sons</text>
+			</navLabel>
+			<content src="text/chapter-123.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-129" playOrder="129">
+			<navLabel>
+				<text>Of Portents</text>
+			</navLabel>
+			<content src="text/chapter-124.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-130" playOrder="130">
+			<navLabel>
+				<text>Flosi’s Journey from Home</text>
+			</navLabel>
+			<content src="text/chapter-125.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-131" playOrder="131">
+			<navLabel>
+				<text>Of Portents at Bergthorsknoll</text>
+			</navLabel>
+			<content src="text/chapter-126.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-132" playOrder="132">
+			<navLabel>
+				<text>The Onslaught1 On Bergthorsknoll</text>
+			</navLabel>
+			<content src="text/chapter-127.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-133" playOrder="133">
+			<navLabel>
+				<text>Njal’s Burning</text>
+			</navLabel>
+			<content src="text/chapter-128.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-134" playOrder="134">
+			<navLabel>
+				<text>Skarphedinn’s Death</text>
+			</navLabel>
+			<content src="text/chapter-129.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-135" playOrder="135">
+			<navLabel>
+				<text>Of Kari Solmund’s Son</text>
+			</navLabel>
+			<content src="text/chapter-130.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-136" playOrder="136">
+			<navLabel>
+				<text>Njal’s and Bergthora’s Bones Found</text>
+			</navLabel>
+			<content src="text/chapter-131.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-137" playOrder="137">
+			<navLabel>
+				<text>Flosi’s Dream</text>
+			</navLabel>
+			<content src="text/chapter-132.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-138" playOrder="138">
+			<navLabel>
+				<text>Of Flosi’s Journey and His Asking for Help</text>
+			</navLabel>
+			<content src="text/chapter-133.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-139" playOrder="139">
+			<navLabel>
+				<text>Of Thorhall and Kari</text>
+			</navLabel>
+			<content src="text/chapter-134.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-140" playOrder="140">
+			<navLabel>
+				<text>Of Flosi and the Burners</text>
+			</navLabel>
+			<content src="text/chapter-135.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-141" playOrder="141">
+			<navLabel>
+				<text>Of Thorgeir Craggeir</text>
+			</navLabel>
+			<content src="text/chapter-136.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-142" playOrder="142">
+			<navLabel>
+				<text>Of Eyjolf Bolverk’s Son</text>
+			</navLabel>
+			<content src="text/chapter-137.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-143" playOrder="143">
+			<navLabel>
+				<text>Of Asgrim, and Gizur, and Kari</text>
+			</navLabel>
+			<content src="text/chapter-138.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-144" playOrder="144">
+			<navLabel>
+				<text>Of Asgrim and Gudmund</text>
+			</navLabel>
+			<content src="text/chapter-139.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-145" playOrder="145">
+			<navLabel>
+				<text>Of the Declarations of the Suits</text>
+			</navLabel>
+			<content src="text/chapter-140.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-146" playOrder="146">
+			<navLabel>
+				<text>Now Men Go to the Courts</text>
+			</navLabel>
+			<content src="text/chapter-141.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-147" playOrder="147">
+			<navLabel>
+				<text>Of Eyjolf Bolverk’s Son</text>
+			</navLabel>
+			<content src="text/chapter-142.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-148" playOrder="148">
+			<navLabel>
+				<text>The Counsel of Thorhall Asgrim’s Son</text>
+			</navLabel>
+			<content src="text/chapter-143.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-149" playOrder="149">
+			<navLabel>
+				<text>Battle at the Althing</text>
+			</navLabel>
+			<content src="text/chapter-144.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-150" playOrder="150">
+			<navLabel>
+				<text>Of Kari and Thorgeir</text>
+			</navLabel>
+			<content src="text/chapter-145.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-151" playOrder="151">
+			<navLabel>
+				<text>The Award of Atonement with Thorgeir Craggeir</text>
+			</navLabel>
+			<content src="text/chapter-146.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-152" playOrder="152">
+			<navLabel>
+				<text>Kari Comes to Bjorn’s House in the Mark</text>
+			</navLabel>
+			<content src="text/chapter-147.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-153" playOrder="153">
+			<navLabel>
+				<text>Of Flosi and the Burners</text>
+			</navLabel>
+			<content src="text/chapter-148.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-154" playOrder="154">
+			<navLabel>
+				<text>Of Kari and Bjorn</text>
+			</navLabel>
+			<content src="text/chapter-149.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-155" playOrder="155">
+			<navLabel>
+				<text>More of Kari and Bjorn</text>
+			</navLabel>
+			<content src="text/chapter-150.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-156" playOrder="156">
+			<navLabel>
+				<text>Of Kari and Bjorn and Thorgeir</text>
+			</navLabel>
+			<content src="text/chapter-151.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-157" playOrder="157">
+			<navLabel>
+				<text>Flosi Goes Abroad</text>
+			</navLabel>
+			<content src="text/chapter-152.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-158" playOrder="158">
+			<navLabel>
+				<text>Kari Goes Abroad</text>
+			</navLabel>
+			<content src="text/chapter-153.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-159" playOrder="159">
+			<navLabel>
+				<text>Gunnar Lambi’s Son’s Slaying</text>
+			</navLabel>
+			<content src="text/chapter-154.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-160" playOrder="160">
+			<navLabel>
+				<text>Of Signs and Wonders</text>
+			</navLabel>
+			<content src="text/chapter-155.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-161" playOrder="161">
+			<navLabel>
+				<text>The Woof of War</text>
+			</navLabel>
+			<content src="text/chapter-156-a.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-162" playOrder="162">
+			<navLabel>
+				<text>Brian’s Battle</text>
+			</navLabel>
+			<content src="text/chapter-156.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-163" playOrder="163">
+			<navLabel>
+				<text>The Slaying of Kol Thorstein’s Son</text>
+			</navLabel>
+			<content src="text/chapter-157.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-164" playOrder="164">
+			<navLabel>
+				<text>Of Flosi and Kari</text>
+			</navLabel>
+			<content src="text/chapter-158.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-165" playOrder="165">
+			<navLabel>
+				<text>Icelandic Chronology</text>
+			</navLabel>
+			<content src="text/chronology.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-166" playOrder="166">
+			<navLabel>
+				<text>Additions and Corrections</text>
+			</navLabel>
+			<content src="text/appendix-14.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-167" playOrder="167">
+			<navLabel>
+				<text>Chronology and Outline of the Story</text>
+			</navLabel>
+			<content src="text/appendix-11.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-168" playOrder="168">
+			<navLabel>
+				<text>Physical Features</text>
+			</navLabel>
+			<content src="text/appendix-6.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-169" playOrder="169">
+			<navLabel>
+				<text>Religion of the Race</text>
+			</navLabel>
+			<content src="text/appendix-7.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-170" playOrder="170">
+			<navLabel>
+				<text>Social Principles</text>
+			</navLabel>
+			<content src="text/appendix-8.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-171" playOrder="171">
+			<navLabel>
+				<text>The Icelandic Commonwealth</text>
+			</navLabel>
+			<content src="text/appendix-9.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-172" playOrder="172">
+			<navLabel>
+				<text>Chief Settlers in the South-West</text>
+			</navLabel>
+			<content src="text/appendix-10.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-173" playOrder="173">
+			<navLabel>
+				<text>Sea-Roving and the Viking Spirit</text>
+			</navLabel>
+			<content src="text/appendix-12.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-174" playOrder="174">
+			<navLabel>
+				<text>Money and Currency in the Tenth Century</text>
+			</navLabel>
+			<content src="text/appendix-13.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-175" playOrder="175">
+			<navLabel>
+				<text>Endnotes</text>
+			</navLabel>
+			<content src="text/endnotes.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-176" playOrder="176">
+			<navLabel>
+				<text>About the Translator</text>
+			</navLabel>
+			<content src="text/about-the-translator.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-177" playOrder="177">
+			<navLabel>
+				<text>Copyright &amp; Permissions</text>
+			</navLabel>
+			<content src="text/permissions.xhtml"/>
+		</navPoint>
+		<navPoint id="navPoint-178" playOrder="178">
+			<navLabel>
+				<text>Icelandic Chronology</text>
+			</navLabel>
+			<content src="text/appendix-15.xhtml"/>
+		</navPoint>
 	</navMap>
 </ncx>
