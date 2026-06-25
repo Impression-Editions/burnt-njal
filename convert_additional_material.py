@@ -472,21 +472,34 @@ def fix_ocr_spacing(text: str) -> str:
     Handles:
     - Space before punctuation: "word !" → "word!"
     - Hyphen+space within words: "Fjórðungs- þing" → "Fjórðungsþing"
+    - Space before closing quotes: —" → —"
+    - Abbreviations: wrap in <abbr> for se lint t-029
     """
     # Remove space before punctuation (!, ?, ;, :, ,)
-    # But not inside HTML tags (there are none at this point — pure text)
     text = re.sub(r' +([!?;:,])', r'\1', text)
     
-    # Fix space before opening quotes: " '" → "'" and ' "' → '"'
-    # OCR artifacts where extra space appears before quotation marks
-    text = re.sub(r' " ', ' "', text)
-    text = re.sub(r" ' ", " '", text)
-    text = re.sub(r' "(?=[A-Z])', ' "', text)  # space before capital+quote
+    # Fix space before opening quotes (after escape_xml, " → &quot;)
+    text = re.sub(r' &quot; ', ' &quot;', text)
+    text = re.sub(r" &apos; ", " &apos;", text)
+    
+    # Fix space before closing quotes after em-dash: —&quot; → —&quot;
+    text = re.sub(r'—\s+&quot;', '—&quot;', text)
+    text = re.sub(r'—\s+&apos;', "—&apos;", text)
     
     # Fix hyphen+space within words (OCR line-break artifacts)
-    # Pattern: lowercase/diacritic + hyphen + space + lowercase
-    # e.g., "þilividi- num" → "þilividinum", "Bár- ðar" → "Bárðar"
     text = re.sub(r'(\w)- (\w)', r'\1\2', text)
+    
+    # Wrap common abbreviations in <abbr> (t-029: period + lowercase)
+    text = re.sub(r'\bN\.\s*lat\b', '<abbr>N. lat</abbr>', text)
+    text = re.sub(r'\bW\.\s*long\b', '<abbr>W. long</abbr>', text)
+    text = re.sub(r'\bS\.\s*lat\b', '<abbr>S. lat</abbr>', text)
+    text = re.sub(r'\bE\.\s*long\b', '<abbr>E. long</abbr>', text)
+    text = re.sub(r'\bDict\.\s*sub\b', '<abbr>Dict. sub</abbr>', text)
+    text = re.sub(r'\bvol\.\s*i\b', '<abbr>vol. i</abbr>', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bvol\.\s*ii\b', '<abbr>vol. ii</abbr>', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bvol\.\s*iii\b', '<abbr>vol. iii</abbr>', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bvol\.\s*iv\b', '<abbr>vol. iv</abbr>', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bvol\.\s*v\b', '<abbr>vol. v</abbr>', text, flags=re.IGNORECASE)
     
     return text
 
@@ -618,10 +631,10 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
             parts.append(f'\t\t\t\t<h3 epub:type="title">{escape_xml(heading_text)}</h3>')
             in_subsection = True
         elif action == 'paragraph':
-            # Fix OCR spacing errors before XML escaping
-            para = fix_ocr_spacing(para)
             # Escape XML entities first (before adding link tags)
             para = escape_xml(para)
+            # Fix OCR spacing errors after XML escaping
+            para = fix_ocr_spacing(para)
             # Then convert FN placeholders to noteref links
             para = convert_fn_placeholders(para, short_name)
             # Add class="continued" if paragraph starts with lowercase
