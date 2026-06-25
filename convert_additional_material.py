@@ -336,17 +336,6 @@ def body_to_paragraphs(text: str) -> list[str]:
     return paragraphs
 
 
-def fix_ocr_spacing(text: str) -> str:
-    """Fix common OCR spacing errors flagged by se-lint.
-    t-041: space before semicolons/colons — 'word ;' → 'word;'
-    t-033: space after em-dash — 'word— ' → 'word—'
-    """
-    # Collapse double+ spaces (t-001)
-    text = re.sub(r"  +", " ", text)
-    # Space before semicolons and colons
-    text = re.sub(r'\s+([;:])', r'\1', text)
-    return text
-
 def escape_xml(text: str) -> str:
     """Escape XML special characters."""
     return (text
@@ -460,7 +449,7 @@ def process_section(name: str, raw_text: str, word_dict: set = None) -> tuple[li
     
     # Post-processing: fix OCR artifacts
     paragraphs = [fix_missing_spaces(p, word_dict or set()) for p in paragraphs]
-    paragraphs = [fix_ocr_spacing(p) for p in paragraphs]
+    # Note: full fix_ocr_spacing runs later (after escape_xml) in build_section_xhtml
     paragraphs = merge_short_paragraphs(paragraphs)
     
     return paragraphs, all_footnotes
@@ -470,11 +459,14 @@ def fix_ocr_spacing(text: str) -> str:
     """Fix common OCR spacing artifacts in text content.
     
     Handles:
+    - Double spaces: collapse to single (t-001)
     - Space before punctuation: "word !" → "word!"
     - Hyphen+space within words: "Fjórðungs- þing" → "Fjórðungsþing"
     - Space before closing quotes: —" → —"
     - Abbreviations: wrap in <abbr> for se lint t-029
     """
+    # Collapse double+ spaces (t-001)
+    text = re.sub(r"  +", " ", text)
     # Remove space before punctuation (!, ?, ;, :, ,)
     text = re.sub(r' +([!?;:,])', r'\1', text)
     
