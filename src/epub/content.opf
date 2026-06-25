@@ -46,8 +46,8 @@
 		<meta property="se:word-count">269200</meta>
 		<meta property="se:reading-ease.flesch">71.58</meta>
 		<meta property="se:url.encyclopedia.wikipedia">https://en.wikipedia.org/wiki/Burnt_Njal</meta>
-		<dc:creator id="author">George Webbe Dasent</dc:creator>
-		<meta property="file-as" refines="#author">Dasent, George Webbe</meta>
+		<dc:creator id="author">Anonymous</dc:creator>
+		<meta property="file-as" refines="#author">Anonymous</meta>
 		<meta property="role" refines="#author" scheme="marc:relators">ann</meta>
 		<meta property="role" refines="#author" scheme="marc:relators">aut</meta>
 		<meta property="role" refines="#artist" scheme="marc:relators">art</meta>
@@ -79,7 +79,8 @@
 		<item href="fonts/SortsMillGoudy-Italic.woff2" id="SortsMillGoudy-Italic.woff2" media-type="application/vnd.ms-opentype"/>
 		<item href="fonts/SortsMillGoudy-Regular.woff2" id="SortsMillGoudy-Regular.woff2" media-type="application/vnd.ms-opentype"/>
 		<item href="images/cover.source.jpg" id="cover.source.jpg" media-type="image/jpeg"/>
-		<item href="images/cover.svg" id="cover.svg" media-type="image/svg+xml" properties="cover-image"/>
+				<item href="images/cover.source.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+		<item href="images/cover.svg" id="cover.svg" media-type="image/svg+xml"/>
 		<item href="images/front-view-icelandic-hall.jpg" id="front-view-icelandic-hall.jpg" media-type="image/jpeg"/>
 		<item href="images/logo.svg" id="logo.svg" media-type="image/svg+xml"/>
 		<item href="images/manuscript-modruvallabok-f13r.jpg" id="manuscript-modruvallabok-f13r.jpg" media-type="image/jpeg"/>
