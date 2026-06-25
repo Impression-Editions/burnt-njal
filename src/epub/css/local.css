@@ -655,16 +655,16 @@ table{
 
 th,
 td{
-	border: 1px solid #ccc;
+	border: 1px solid currentColor;
 	padding: .4em .8em;
 	text-align: center;
 }
 
 thead th{
-	background-color: #f5f5f5;
+	background-color: transparent;
 	font-weight: bold;
 }
 
 tbody tr:nth-child(even){
-	background-color: #fafafa;
+	background-color: transparent;
 }
