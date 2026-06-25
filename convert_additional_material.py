@@ -477,6 +477,12 @@ def fix_ocr_spacing(text: str) -> str:
     # But not inside HTML tags (there are none at this point — pure text)
     text = re.sub(r' +([!?;:,])', r'\1', text)
     
+    # Fix space before opening quotes: " '" → "'" and ' "' → '"'
+    # OCR artifacts where extra space appears before quotation marks
+    text = re.sub(r' " ', ' "', text)
+    text = re.sub(r" ' ", " '", text)
+    text = re.sub(r' "(?=[A-Z])', ' "', text)  # space before capital+quote
+    
     # Fix hyphen+space within words (OCR line-break artifacts)
     # Pattern: lowercase/diacritic + hyphen + space + lowercase
     # e.g., "þilividi- num" → "þilividinum", "Bár- ðar" → "Bárðar"
@@ -609,7 +615,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
                 counter += 1
             used_slugs.add(slug)
             parts.append(f'\t\t\t<section id="{short_name}-{slug}">')
-            parts.append(f'\t\t\t\t<h3>{escape_xml(heading_text)}</h3>')
+            parts.append(f'\t\t\t\t<h3 epub:type="title">{escape_xml(heading_text)}</h3>')
             in_subsection = True
         elif action == 'paragraph':
             # Fix OCR spacing errors before XML escaping
@@ -618,7 +624,13 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
             para = escape_xml(para)
             # Then convert FN placeholders to noteref links
             para = convert_fn_placeholders(para, short_name)
-            parts.append(f'\t\t\t<p>{para}</p>')
+            # Add class="continued" if paragraph starts with lowercase
+            # (OCR page-break continuations from the original scan)
+            stripped = para.lstrip()
+            if stripped and stripped[0].islower():
+                parts.append(f'\t\t\t<p class="continued">{para}</p>')
+            else:
+                parts.append(f'\t\t\t<p>{para}</p>')
         # 'strip' → skip entirely
     
     # Close last subsection if still open
