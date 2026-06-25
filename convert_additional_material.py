@@ -537,6 +537,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
     }
     
     # Body paragraphs
+    in_subsection = False
     for para in paragraphs:
         # Check for PLATE marker
         plate_match = re.match(r'^PLATE (\d+)\.?\s*$', para.strip())
@@ -552,6 +553,9 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
         
         action = classify_short_text(para, title)
         if action == 'subheading':
+            # Close previous subsection if open
+            if in_subsection:
+                parts.append('\t\t\t</section>')
             # Titlecase ALL CAPS subheadings
             heading_text = para
             if heading_text == heading_text.upper() and len(heading_text) > 3:
@@ -561,7 +565,12 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
                             ("Of The", "of the"), ("In The", "in the"),
                             ("To The", "to the"), ("And The", "and the")]:
                     heading_text = heading_text.replace(fix[0], fix[1])
-            parts.append(f'\t\t\t<h3>{escape_xml(heading_text)}</h3>')
+            # Open new subsection with heading
+            # Use heading text to generate an id slug
+            slug = re.sub(r'[^a-z0-9]+', '-', heading_text.lower().strip('.')).strip('-')
+            parts.append(f'\t\t\t<section id="{short_name}-{slug}">')
+            parts.append(f'\t\t\t\t<h3>{escape_xml(heading_text)}</h3>')
+            in_subsection = True
         elif action == 'paragraph':
             # Escape XML entities first (before adding link tags)
             para = escape_xml(para)
@@ -569,6 +578,10 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
             para = convert_fn_placeholders(para, short_name)
             parts.append(f'\t\t\t<p>{para}</p>')
         # 'strip' → skip entirely
+    
+    # Close last subsection if still open
+    if in_subsection:
+        parts.append('\t\t\t</section>')
     
     # Footnote section for this part
     
