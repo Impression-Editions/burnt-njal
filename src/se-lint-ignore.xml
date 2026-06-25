@@ -80,8 +80,6 @@
 		<ignore code="s-049">
 			<reason>Chronology header uses titlepage layout</reason>
 		</ignore>
-	</file>
-	<file path="chronology.xhtml">
 		<ignore code="s-021">
 			<reason>Chronology title differs from heading by design</reason>
 		</ignore>
