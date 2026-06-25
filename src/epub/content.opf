@@ -79,8 +79,7 @@
 		<item href="fonts/SortsMillGoudy-Italic.woff2" id="SortsMillGoudy-Italic.woff2" media-type="application/vnd.ms-opentype"/>
 		<item href="fonts/SortsMillGoudy-Regular.woff2" id="SortsMillGoudy-Regular.woff2" media-type="application/vnd.ms-opentype"/>
 		<item href="images/cover.source.jpg" id="cover.source.jpg" media-type="image/jpeg"/>
-				<item href="images/cover.source.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
-		<item href="images/cover.svg" id="cover.svg" media-type="image/svg+xml"/>
+		<item href="images/cover.svg" id="cover.svg" media-type="image/svg+xml" properties="cover-image"/>
 		<item href="images/front-view-icelandic-hall.jpg" id="front-view-icelandic-hall.jpg" media-type="image/jpeg"/>
 		<item href="images/logo.svg" id="logo.svg" media-type="image/svg+xml"/>
 		<item href="images/manuscript-modruvallabok-f13r.jpg" id="manuscript-modruvallabok-f13r.jpg" media-type="image/jpeg"/>
@@ -101,7 +100,6 @@
 		<item href="text/appendix-12.xhtml" id="appendix-12.xhtml" media-type="application/xhtml+xml"/>
 		<item href="text/appendix-13.xhtml" id="appendix-13.xhtml" media-type="application/xhtml+xml"/>
 		<item href="text/appendix-14.xhtml" id="appendix-14.xhtml" media-type="application/xhtml+xml"/>
-		<item href="text/appendix-15.xhtml" id="appendix-15.xhtml" media-type="application/xhtml+xml"/>
 		<item href="text/chapter-1.xhtml" id="chapter-1.xhtml" media-type="application/xhtml+xml"/>
 		<item href="text/chapter-2.xhtml" id="chapter-2.xhtml" media-type="application/xhtml+xml"/>
 		<item href="text/chapter-3.xhtml" id="chapter-3.xhtml" media-type="application/xhtml+xml"/>
@@ -273,17 +271,9 @@
 	<spine>
 		<itemref idref="titlepage.xhtml"/>
 		<itemref idref="imprint.xhtml"/>
-		<itemref idref="about-the-translator.xhtml"/>
-		<itemref idref="appendix-6.xhtml"/>
-		<itemref idref="appendix-7.xhtml"/>
-		<itemref idref="appendix-8.xhtml"/>
-		<itemref idref="appendix-9.xhtml"/>
-		<itemref idref="appendix-10.xhtml"/>
-		<itemref idref="appendix-11.xhtml"/>
-		<itemref idref="appendix-12.xhtml"/>
-		<itemref idref="appendix-13.xhtml"/>
-		<itemref idref="appendix-14.xhtml"/>
-		<itemref idref="appendix-15.xhtml"/>
+		<itemref idref="preface.xhtml"/>
+		<itemref idref="manuscript.xhtml"/>
+		<itemref idref="map.xhtml"/>
 		<itemref idref="chapter-1.xhtml"/>
 		<itemref idref="chapter-2.xhtml"/>
 		<itemref idref="chapter-3.xhtml"/>
@@ -443,10 +433,17 @@
 		<itemref idref="chapter-156.xhtml"/>
 		<itemref idref="chapter-157.xhtml"/>
 		<itemref idref="chapter-158.xhtml"/>
-		<itemref idref="manuscript.xhtml"/>
-		<itemref idref="map.xhtml"/>
-		<itemref idref="preface.xhtml"/>
+		<itemref idref="appendix-6.xhtml"/>
+		<itemref idref="appendix-7.xhtml"/>
+		<itemref idref="appendix-8.xhtml"/>
+		<itemref idref="appendix-9.xhtml"/>
+		<itemref idref="appendix-10.xhtml"/>
+		<itemref idref="appendix-11.xhtml"/>
+		<itemref idref="appendix-12.xhtml"/>
+		<itemref idref="appendix-13.xhtml"/>
+		<itemref idref="appendix-14.xhtml"/>
 		<itemref idref="endnotes.xhtml"/>
+		<itemref idref="about-the-translator.xhtml"/>
 		<itemref idref="permissions.xhtml"/>
-</spine>
+	</spine>
 </package>
