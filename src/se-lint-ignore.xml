@@ -26,4 +26,34 @@
 			<reason>Titlepage is not a ToC entry</reason>
 		</ignore>
 	</file>
+	<!-- x-019: Custom endnote id scheme (noteref-physical-features-1, note-physical-features-1) -->
+	<file path="appendix-6.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-7.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-8.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-9.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-10.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-11.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-12.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="appendix-13.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="preface.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<file path="endnotes.xhtml"><ignore code="x-019"><reason>Custom endnote linking ids from OCR converter</reason></ignore></file>
+	<!-- x-018: Unused ids from custom endnote linking scheme -->
+	<file path="appendix-11.xhtml"><ignore code="x-018"><reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason></ignore></file>
+	<file path="appendix-12.xhtml"><ignore code="x-018"><reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason></ignore></file>
+	<file path="appendix-13.xhtml"><ignore code="x-018"><reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason></ignore></file>
+	<file path="endnotes.xhtml"><ignore code="x-018"><reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason></ignore></file>
+	<!-- f-018: Historical scan images need high resolution for legibility -->
+	<file path="front-view-icelandic-hall.jpg"><ignore code="f-018"><reason>Historical scan from 1861 edition — high resolution needed for architectural detail</reason></ignore></file>
+	<file path="map-of-iceland-hq.jpg"><ignore code="f-018"><reason>Historical scan — high resolution needed for geographic detail and place names</reason></ignore></file>
+	<file path="map-of-iceland.jpg"><ignore code="f-018"><reason>Historical scan — high resolution needed for geographic detail</reason></ignore></file>
+	<file path="map-sw-iceland.jpg"><ignore code="f-018"><reason>Historical scan from 1861 edition — shows scene of key saga events</reason></ignore></file>
+	<file path="plan-almannagia-althing.jpg"><ignore code="f-018"><reason>Historical architectural plan — high resolution needed for measurement legibility</reason></ignore></file>
+	<file path="plan-thingvalla.jpg"><ignore code="f-018"><reason>Historical architectural plan — high resolution needed for measurement legibility</reason></ignore></file>
+	<file path="plate-1-ground-plan.jpg"><ignore code="f-018"><reason>Historical architectural plate from 1861 edition</reason></ignore></file>
+	<file path="plate-2-floor-plan.jpg"><ignore code="f-018"><reason>Historical architectural plate from 1861 edition</reason></ignore></file>
+	<file path="plate-3-section-lengthwise.jpg"><ignore code="f-018"><reason>Historical architectural plate from 1861 edition</reason></ignore></file>
+	<file path="plate-4-cross-section.jpg"><ignore code="f-018"><reason>Historical architectural plate from 1861 edition</reason></ignore></file>
+	<!-- s-032: z3998 vocabulary values not recognized by se-lint -->
+	<file path="chronology.xhtml"><ignore code="s-032"><reason>z3998:chronology is a valid z3998 vocabulary value</reason></ignore></file>
+	<file path="map.xhtml"><ignore code="s-032"><reason>z3998:map is a valid z3998 vocabulary value</reason></ignore></file>
 </se-lint-ignore>

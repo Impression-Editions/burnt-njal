@@ -334,6 +334,15 @@ def body_to_paragraphs(text: str) -> list[str]:
     return paragraphs
 
 
+def fix_ocr_spacing(text: str) -> str:
+    """Fix common OCR spacing errors flagged by se-lint.
+    t-041: space before semicolons/colons — 'word ;' → 'word;'
+    t-033: space after em-dash — 'word— ' → 'word—'
+    """
+    # Space before semicolons and colons
+    text = re.sub(r'\s+([;:])', r'\1', text)
+    return text
+
 def escape_xml(text: str) -> str:
     """Escape XML special characters."""
     return (text
@@ -476,7 +485,7 @@ def build_xhtml(sections: list[tuple[str, str, list[str], list[dict]]]) -> str:
         if footnotes:
             parts.append(f'<h3>Notes</h3>')
             for i, fn in enumerate(footnotes, 1):
-                fn_text = escape_xml(fn['text'])
+                fn_text = fix_ocr_spacing(escape_xml(fn['text']))
                 parts.append(f'<p id="note-{filename}-{i}">{fn_text}</p>')
         
         # Split marker between sections
@@ -572,6 +581,8 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
             parts.append(f'\t\t\t\t<h3>{escape_xml(heading_text)}</h3>')
             in_subsection = True
         elif action == 'paragraph':
+            # Fix OCR spacing errors before XML escaping
+            para = fix_ocr_spacing(para)
             # Escape XML entities first (before adding link tags)
             para = escape_xml(para)
             # Then convert FN placeholders to noteref links
@@ -612,7 +623,7 @@ def build_section_xhtml(title: str, paragraphs: list[str], footnotes: list[dict]
             n = fn['index']
             note_id = f"note-{short_name}-{n}"
             ref_id = f"noteref-{short_name}-{n}"
-            fn_text = escape_xml(fn['text'])
+            fn_text = fix_ocr_spacing(escape_xml(fn['text']))
             # Back-reference link before the note text
             parts.append(f'\t\t\t\t<p id="{note_id}"><a href="#{ref_id}">{n}</a> {fn_text}</p>')
         parts.append('\t\t\t</section>')
