@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <se-lint-ignore>
-	<file path="appendix-6.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-7.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-8.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-9.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
 	<file path="appendix-10.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
@@ -60,6 +40,26 @@
 			<reason>Appendix 15 heading not needed in ToC</reason>
 		</ignore>
 	</file>
+	<file path="appendix-6.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-7.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-8.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-9.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
 	<file path="chapter-123.xhtml">
 		<ignore code="t-033">
 			<reason>U+2060 word joiner before em-dash from PG source, not a space</reason>
@@ -90,11 +90,11 @@
 		</ignore>
 	</file>
 	<file path="content.opf">
-		<ignore code="m-040">
-			<reason>IE does not use SE image collection semantics</reason>
-		</ignore>
 		<ignore code="m-042">
 			<reason>IE Calibre raster cover workaround adds manifest item not expected by SE</reason>
+		</ignore>
+		<ignore code="m-040">
+			<reason>IE does not use SE image collection semantics</reason>
 		</ignore>
 		<ignore code="m-058">
 			<reason>IE subject vocabulary differs from SE</reason>
@@ -104,9 +104,6 @@
 		</ignore>
 	</file>
 	<file path="cover.svg">
-		<ignore code="s-002">
-			<reason>IE cover uses lowercase wordmark design (IMPRESSION EDITIONS)</reason>
-		</ignore>
 		<ignore code="s-028">
 			<reason>Cover SVG and titlepage SVG titles differ by design</reason>
 		</ignore>
@@ -117,11 +114,6 @@
 		</ignore>
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="front-view-icelandic-hall.jpg">
-		<ignore code="f-018">
-			<reason>Historical scan from 1861 edition — high resolution needed for architectural detail</reason>
 		</ignore>
 	</file>
 	<file path="local.css">
@@ -135,57 +127,9 @@
 			<reason>IE cover uses smaller font sizes for design elements</reason>
 		</ignore>
 	</file>
-	<file path="map-of-iceland-hq.jpg">
-		<ignore code="f-018">
-			<reason>Historical scan — high resolution needed for geographic detail and place names</reason>
-		</ignore>
-	</file>
-	<file path="map-of-iceland.jpg">
-		<ignore code="f-016">
-			<reason>Historical map scan — high resolution needed for place name legibility</reason>
-		</ignore>
-		<ignore code="f-018">
-			<reason>Historical scan — high resolution needed for geographic detail</reason>
-		</ignore>
-	</file>
-	<file path="map-sw-iceland.jpg">
-		<ignore code="f-018">
-			<reason>Historical scan from 1861 edition — shows scene of key saga events</reason>
-		</ignore>
-	</file>
 	<file path="map.xhtml">
 		<ignore code="s-032">
 			<reason>z3998:map is a valid z3998 vocabulary value</reason>
-		</ignore>
-	</file>
-	<file path="plan-almannagia-althing.jpg">
-		<ignore code="f-018">
-			<reason>Historical architectural plan — high resolution needed for measurement legibility</reason>
-		</ignore>
-	</file>
-	<file path="plan-thingvalla.jpg">
-		<ignore code="f-018">
-			<reason>Historical architectural plan — high resolution needed for measurement legibility</reason>
-		</ignore>
-	</file>
-	<file path="plate-1-ground-plan.jpg">
-		<ignore code="f-018">
-			<reason>Historical architectural plate from 1861 edition</reason>
-		</ignore>
-	</file>
-	<file path="plate-2-floor-plan.jpg">
-		<ignore code="f-018">
-			<reason>Historical architectural plate from 1861 edition</reason>
-		</ignore>
-	</file>
-	<file path="plate-3-section-lengthways.jpg">
-		<ignore code="f-018">
-			<reason>Historical architectural plate from 1861 edition</reason>
-		</ignore>
-	</file>
-	<file path="plate-4-cross-section.jpg">
-		<ignore code="f-018">
-			<reason>Historical architectural plate from 1861 edition</reason>
 		</ignore>
 	</file>
 	<file path="preface.xhtml">
