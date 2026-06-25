@@ -26,9 +26,6 @@
 		</ignore>
 	</file>
 	<file path="appendix-11.xhtml">
-		<ignore code="t-025">
-			<reason>Image alt text uses straight quotes per HTML attribute convention</reason>
-		</ignore>
 		<ignore code="x-018">
 			<reason>Endnote ids referenced by custom linking (not detected by se-lint)</reason>
 		</ignore>
@@ -52,23 +49,13 @@
 			<reason>Custom endnote linking ids from OCR converter</reason>
 		</ignore>
 	</file>
-	<file path="appendix-15.xhtml">
-		<ignore code="f-007">
-			<reason>Appendix 15 excluded from manifest by design</reason>
-		</ignore>
-		<ignore code="m-045">
-			<reason>Appendix 15 heading not needed in ToC</reason>
-		</ignore>
-	</file>
+	
 	<file path="chapter-123.xhtml">
 		<ignore code="t-033">
 			<reason>U+2060 word joiner before em-dash from PG source, not a space</reason>
 		</ignore>
 	</file>
 	<file path="chapter-127.xhtml">
-		<ignore code="m-045">
-			<reason>Heading text includes noteref anchor, not pure text</reason>
-		</ignore>
 		<ignore code="s-021">
 			<reason>Title text contains em-dash which se-lint expects removed</reason>
 		</ignore>
@@ -82,9 +69,6 @@
 		</ignore>
 	</file>
 	<file path="chronology.xhtml">
-		<ignore code="m-045">
-			<reason>Essay section title, not in PG chapter ToC</reason>
-		</ignore>
 		<ignore code="s-011">
 			<reason>Chronology uses titlepage section structure</reason>
 		</ignore>
@@ -194,7 +178,7 @@
 			<reason>Original IA plate scan resolution preserved</reason>
 		</ignore>
 	</file>
-	<file path="plate-3-section-lengthwise.jpg">
+	<file path="plate-3-section-lengthways.jpg">
 		<ignore code="f-018">
 			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
