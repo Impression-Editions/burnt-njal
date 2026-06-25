@@ -274,6 +274,7 @@
 		<item href="toc.xhtml" id="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
 	</manifest>
 	<spine>
+		<itemref idref="chronology.xhtml"/>
 		<itemref idref="titlepage.xhtml"/>
 		<itemref idref="imprint.xhtml"/>
 		<itemref idref="preface.xhtml"/>
@@ -438,19 +439,18 @@
 		<itemref idref="chapter-156.xhtml"/>
 		<itemref idref="chapter-157.xhtml"/>
 		<itemref idref="chapter-158.xhtml"/>
-		<itemref idref="chronology.xhtml"/>
-		<itemref idref="appendix-14.xhtml"/>
-		<itemref idref="appendix-11.xhtml"/>
 		<itemref idref="appendix-6.xhtml"/>
 		<itemref idref="appendix-7.xhtml"/>
 		<itemref idref="appendix-8.xhtml"/>
 		<itemref idref="appendix-9.xhtml"/>
 		<itemref idref="appendix-10.xhtml"/>
+		<itemref idref="appendix-11.xhtml"/>
 		<itemref idref="appendix-12.xhtml"/>
 		<itemref idref="appendix-13.xhtml"/>
+		<itemref idref="appendix-14.xhtml"/>
+		<itemref idref="appendix-15.xhtml"/>
 		<itemref idref="endnotes.xhtml"/>
 		<itemref idref="about-the-translator.xhtml"/>
 		<itemref idref="permissions.xhtml"/>
-		<itemref idref="appendix-15.xhtml"/>
 	</spine>
 </package>
