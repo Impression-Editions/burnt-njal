@@ -482,16 +482,20 @@ def fix_ocr_spacing(text: str) -> str:
     text = re.sub(r'(\w)- (\w)', r'\1\2', text)
     
     # Wrap common abbreviations in <abbr> (t-029: period + lowercase)
-    text = re.sub(r'\bN\.\s*lat\b', '<abbr>N. lat</abbr>', text)
-    text = re.sub(r'\bW\.\s*long\b', '<abbr>W. long</abbr>', text)
-    text = re.sub(r'\bS\.\s*lat\b', '<abbr>S. lat</abbr>', text)
-    text = re.sub(r'\bE\.\s*long\b', '<abbr>E. long</abbr>', text)
-    text = re.sub(r'\bDict\.\s*sub\b', '<abbr>Dict. sub</abbr>', text)
+    # Include trailing period to satisfy t-032 (period within <abbr>)
+    text = re.sub(r'\bN\.\s*lat\.?', '<abbr>N. lat.</abbr>', text)
+    text = re.sub(r'\bW\.\s*long\.?', '<abbr>W. long.</abbr>', text)
+    text = re.sub(r'\bS\.\s*lat\.?', '<abbr>S. lat.</abbr>', text)
+    text = re.sub(r'\bE\.\s*long\.?', '<abbr>E. long.</abbr>', text)
+    text = re.sub(r'\bDict\.\s*sub\.?', '<abbr>Dict. sub.</abbr>', text)
     text = re.sub(r'\bvol\.\s*i\b', '<abbr>vol. i</abbr>', text, flags=re.IGNORECASE)
     text = re.sub(r'\bvol\.\s*ii\b', '<abbr>vol. ii</abbr>', text, flags=re.IGNORECASE)
     text = re.sub(r'\bvol\.\s*iii\b', '<abbr>vol. iii</abbr>', text, flags=re.IGNORECASE)
     text = re.sub(r'\bvol\.\s*iv\b', '<abbr>vol. iv</abbr>', text, flags=re.IGNORECASE)
     text = re.sub(r'\bvol\.\s*v\b', '<abbr>vol. v</abbr>', text, flags=re.IGNORECASE)
+    # Also wrap "pp." (pages) and "cf." (compare) common in endnotes
+    text = re.sub(r'\bpp\.\s', '<abbr>pp. </abbr>', text)
+    text = re.sub(r'\bcf\.\s', '<abbr>cf. </abbr>', text)
     
     return text
 
