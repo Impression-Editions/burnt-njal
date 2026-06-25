@@ -644,54 +644,30 @@ section[epub|type~="z3998:dedication"] p{
 	text-align: center;
 }
 
-/* For currency/metric tables in essays. Styled with borders and header emphasis. */
-table{
+/* === DATA TABLES (currency/metric tables in essays) === */
+/* Scoped to non-chronology tables so chronology keeps its borderless style. */
+table:not([epub|type~="z3998:chronology"]){
 	border-collapse: collapse;
 	font-size: .9em;
-	margin: 1em auto;
+	margin: 1.5em auto;
 	width: 90%;
 }
 
-th,
-td{
-	border: 1px solid;
-	padding: .4em .8em;
-	text-align: center;
-}
-
-thead th{
-	background-color: transparent;
-	font-weight: bold;
-}
-
-tbody tr:nth-child(even){
-	background-color: transparent;
-}
-
-/* === DATA TABLES === */
-/* For currency/metric tables in essays. */
-table{
-	border-collapse: collapse;
-	font-size: .85em;
-	margin: 1em auto;
-	table-layout: fixed;
-	width: 80%;
-}
-
-th,
-td{
+table:not([epub|type~="z3998:chronology"]) th,
+table:not([epub|type~="z3998:chronology"]) td{
 	border: 1px solid #ccc;
-	overflow-wrap: break-word;
-	padding: .3em .5em;
+	padding: .5em .8em;
 	text-align: center;
-	word-wrap: break-word;
 }
 
-thead th{
-	background-color: #f0f0f0;
+table:not([epub|type~="z3998:chronology"]) thead th{
 	font-weight: bold;
 }
 
-tbody tr:nth-child(even){
+table:not([epub|type~="z3998:chronology"]) tbody th[rowscope]{
+	text-align: left;
+}
+
+table:not([epub|type~="z3998:chronology"]) tbody tr:nth-child(even){
 	background-color: #fafafa;
 }
