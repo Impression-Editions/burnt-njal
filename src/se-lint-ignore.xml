@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <se-lint-ignore>
-	<file path="appendix-6.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-7.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-8.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
-	<file path="appendix-9.xhtml">
-		<ignore code="x-019">
-			<reason>Custom endnote linking ids from OCR converter</reason>
-		</ignore>
-	</file>
 	<file path="appendix-10.xhtml">
 		<ignore code="x-019">
 			<reason>Custom endnote linking ids from OCR converter</reason>
@@ -60,6 +40,26 @@
 			<reason>Appendix 15 heading not needed in ToC</reason>
 		</ignore>
 	</file>
+	<file path="appendix-6.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-7.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-8.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
+	<file path="appendix-9.xhtml">
+		<ignore code="x-019">
+			<reason>Custom endnote linking ids from OCR converter</reason>
+		</ignore>
+	</file>
 	<file path="chapter-123.xhtml">
 		<ignore code="t-033">
 			<reason>U+2060 word joiner before em-dash from PG source, not a space</reason>
@@ -69,8 +69,7 @@
 		<ignore code="s-021">
 			<reason>Title text contains em-dash which se-lint expects removed</reason>
 		</ignore>
-	</file>
-	<file path="chapter-127.xhtml">
+	
 		<ignore code="m-045">
 			<reason>Heading text includes noteref anchor, not pure text</reason>
 		</ignore>
@@ -96,8 +95,7 @@
 		<ignore code="s-049">
 			<reason>Chronology header uses titlepage layout</reason>
 		</ignore>
-	</file>
-	<file path="chronology.xhtml">
+	
 		<ignore code="m-045">
 			<reason>Essay section title, not in PG chapter ToC</reason>
 		</ignore>
@@ -158,9 +156,29 @@
 			<reason>Original map scan resolution preserved</reason>
 		</ignore>
 	</file>
+	<file path="map-sw-iceland.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
+		</ignore>
+	</file>
 	<file path="map.xhtml">
 		<ignore code="s-032">
 			<reason>z3998:map is a valid z3998 vocabulary value</reason>
+		</ignore>
+	</file>
+	<file path="plan-almannagia-althing.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
+		</ignore>
+	</file>
+	<file path="plan-thingvalla.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
+		</ignore>
+	</file>
+	<file path="plate-1-ground-plan.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
 	</file>
 	<file path="plate-1.jpg">
@@ -168,14 +186,29 @@
 			<reason>Original IA plate scan resolution preserved</reason>
 		</ignore>
 	</file>
+	<file path="plate-2-floor-plan.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
+		</ignore>
+	</file>
 	<file path="plate-2.jpg">
 		<ignore code="f-018">
 			<reason>Original IA plate scan resolution preserved</reason>
 		</ignore>
 	</file>
+	<file path="plate-3-section-lengthwise.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
+		</ignore>
+	</file>
 	<file path="plate-3.jpg">
 		<ignore code="f-018">
 			<reason>Original IA plate scan resolution preserved</reason>
+		</ignore>
+	</file>
+	<file path="plate-4-cross-section.jpg">
+		<ignore code="f-018">
+			<reason>Original IA scan resolution preserved for detail</reason>
 		</ignore>
 	</file>
 	<file path="plate-4.jpg">
