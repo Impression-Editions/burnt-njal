@@ -1,0 +1,104 @@
+In The Story of Burnt Njal: The Great Icelandic Tribune, Jurist, and Counsellor, by Sir George Webbe Dasent, [EBook #597],
+File: 597.txt,
+Source scans: Internet Archive
+
+Global Replacements {
+Laxdaela ==> Laxdæla
+Arnbael ==> Arnbæl
+Folsi ==> Flosi
+Kettlebjorn ==> Kettlebjörn
+Gunner ==> Gunnar
+Goeta-Elf ==> Göta-Elf
+M[oe]ren ==> Mœren
+Moeren ==> Mœren
+Maeren ==> Mæren
+Karl ==> Kari
+Lindesnaes ==> Lindesnæs
+Lodese ==> Lödese
+Knafaholes ==> Knafahills
+Horsebeck ==> Hestbeck
+sitting-room ==> hall
+}
+
+Many spears stand up by the holes, and men with weapons.
+holes ==> hills
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/26/mode/2up?q=%22with+his+brother+Hauskuld%22
+Next summer he rode to the Thing, with his brother Hauskuld, and they had a great fellowing. But when he came to the Thing, he asked whether Fiddle Mord were at the Thing, and they told him he was; and all thought they would come to words at once about their matter, but it was not so.
+fellowing ==> following
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/30/mode/2up?q=%22had+so+much+of+it%22
+" She was fair-haired, and had so much of it that she could hide herself in it; but she was layish and hard-hearted.
+layish ==> lavish
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/58/mode/2up?q=%22unthrifty+of+her+property%22
+She was very layish, and unthrifty of her property; so that her goods and ready money wasted away, and at last she had scarce anything left but land and stock.
+layish, ==> lavish,
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/78/mode/2up?q=%22and+bold+and+dauntless%22
+He was a tall man in growth, and strong withal; a good swordsman; he could swim like a seal, the swiftest-looted of men, and bold and dauntless; he had a great flow of words and quick utterance; a good skald too; but still for the most part he kept himself well in hand; his hair was dark brown, with crisp curly locks; he had good eyes; his features were sharp, and his face ashen pale, his nose turned up and his front teeth stuck out, and his mouth was very ugly.
+swiftest-looted ==> swiftest-footed
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/140/mode/2up?q=%22red+flecks%22
+" "The carline, our mother, thinks this fine sport," says Skarphedinn, and smiled scornfully as he spoke, but still the sweat burst out upon his brow, and red flecks came over his checks, but that was not his wont.
+checks ==> cheeks
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/154/mode/2up?q=%22house+to+house+with+small%22
+Then he gave them this counsel, that women should go about from house to house with small ware, and give them to the housewives, and mark what was given them in return.
+ware ==> wares
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/180/mode/2up?q=%22Another+suit+of+manslaughter%22
+Another suit of manslaughter he brought against Gunnar for the slaying of Halljborn the White; then, too, he went on in the same way as to the slaying of Audulf, and so, too, as to the slaying of Skamkell.
+Halljborn ==> Hallbjorn
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/212/mode/2up?q=%22stood+forth+and+said%22
+" Then Hiallti Skeggi's son of Thursodale, stood forth and said
+Hiallti Skeggi's ==> Hjallti Skeggis
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/224/mode/2up?q=%22house-carles%22
+As for Thorgeir of the Threecorner and Mord, they were always meeting; and they plan an onslaught on Gunnar when he rides down to the isles to see after the work done by his house-caries.
+house-caries ==> house-carles
+
+https://archive.org/details/storyburntnjalo02dasegoog/page/250/mode/2up?q=%22rain%22
+"He that lavished rings in largesse, When the fights' red rain-drips fell, Bright of face, with heart-strings hardy, Hogni's father met his fate; Then his brow with helmet shrouding, Bearing battle-shield, he spake, `I will die the prop of battle, Sooner die than yield an inch, Yes, sooner die than yield an inch.
+rain-drips ==> rain-drops
+
+https://archive.org/details/in.ernet.dli.2015.22502/page/n81/mode/2up?q=Hjorleif
+The mother of Flosi was Ingunna, daughter of Thorir of Espihole, the son of Hamond Hellskin, the son of Hjor, the son of Half, who ruled over the men of Half, the son of Hjorfeif, the lover of women.
+Hjorfeif ==> Hjorleif
+
+https://archive.org/details/in.ernet.dli.2015.22502/page/n95/mode/2up?q=%22hot+spring%22
+" This was a hyer, or hot spring.
+hyer ==> hver
+
+https://archive.org/details/in.ernet.dli.2015.22502/page/n141/mode/2up?q=adjure
+Then she spoke and said, "This cloak, Flosi, thou gavest to Hauskuld, and now I will give it back to thee; he was slain in it, and I call God and all good men to witness, that I abjure thee, by all the might of thy Christ, and by thy manhood and bravery, to take vengeance for all those wounds which he had on his dead body, or else to be called every man's dastard.
+abjure ==> adjure
+
+https://archive.org/details/in.ernet.dli.2015.22502/page/n151/mode/2up?q=%22bade+him+sit+down%22
+Asgrim went up to him, and bailed him well; he took it kindly, and bade him sit down.
+bailed ==> hailed
+
+https://archive.org/details/in.ernet.dli.2015.22502/page/n265/mode/2up?q=%22Again+Mord+took+witness%22
+"I take witness to this," said he, "that I bid those nine neighbours whom I summoned when I laid this suit against Flosi Thord's son, to take their seats west on the river-bank, and I call on the defendant to challenge this request, I call on him by a lawful bidding before the court so that the judges may hear.
+request ==> inquest
+
+https://archive.org/details/in.ernet.dli.2015.22502/page/n269/mode/2up?q=%22+son%E2%80%99s+eliallenge%2C%22
+"I take witness to this, that I bring to naught Eyjolf Bolverk's son's challenges for that he has challenged those men out of the inquest who have a lawful right to be there; every man has a right to sit on an inquest of neighbours, who owns three hundreds in land or more, though he may have no dairystock; and he too has the same right who lives by dairystock worth the same sum, though he leases no land.
+Bolverk's son's challenges ==> Bolverk’s son’s challenge
+
+Page 257:
+1112. The suit for the Burning and battle at the Althing; Flosi and the Burners banished; Kari and Thorgeir Craggeir carry on the feud.
+1112. ==> 1012.
+
+Page 257:
+1113. Flosi goes abroad with the Burners, and Kari follows them; Flosi and Kari in Orkney.
+1113. ==> 1013.
+
+Page 257:
+1114. Brian's battle on Good Friday; Flosi goes to Rome.
+1114. ==> 1014.
+
+Page 257:
+1116. Flosi returns to Iceland; Kari goes to Rome and returns to Caithness; his wife Helga dies out in Iceland.
+1116. ==> 1016.
